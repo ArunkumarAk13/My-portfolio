@@ -1,3 +1,29 @@
+// Fetch and render skills dynamically
+async function loadSkills() {
+    try {
+        const response = await fetch('skills.json');
+        const data = await response.json();
+        const skillContainer = document.getElementById('skill-container');
+        
+        data.skills.forEach(skill => {
+            const skillHTML = `
+                <div class="progress-bar-container">
+                    <h2 class="skill-name">${skill.name}</h2>
+                    <div class="progress-bar">
+                        <div class="percentage-per" per="${skill.percentage}%" style="max-width:${skill.percentage}%;"></div>
+                    </div>
+                </div>
+            `;
+            skillContainer.innerHTML += skillHTML;
+        });
+    } catch (error) {
+        console.error('Error loading skills:', error);
+    }
+}
+
+// Load skills when the page loads
+document.addEventListener('DOMContentLoaded', loadSkills);
+
 let menuBar = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
 
