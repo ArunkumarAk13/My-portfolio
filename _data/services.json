@@ -1,0 +1,46 @@
+{
+  "services": [
+    {
+      "id": "web-development",
+      "title": "Web Development",
+      "description": "Creating responsive, fast, and visually stunning websites and web applications tailored to your business needs.",
+      "icon": "fa-solid fa-globe",
+      "features": [
+        "Responsive Design for all devices",
+        "Modern UI/UX with animations",
+        "Frontend & Backend development",
+        "Database design & integration",
+        "Performance optimization",
+        "SEO-friendly structure"
+      ]
+    },
+    {
+      "id": "iot-development",
+      "title": "IoT Development",
+      "description": "Building smart, connected systems and embedded solutions using modern IoT platforms and microcontrollers.",
+      "icon": "fa-solid fa-microchip",
+      "features": [
+        "Arduino & ESP32 programming",
+        "Raspberry Pi projects",
+        "Sensor integration & data logging",
+        "Real-time monitoring dashboards",
+        "Wireless communication (WiFi/BT)",
+        "Automated control systems"
+      ]
+    },
+    {
+      "id": "cybersecurity",
+      "title": "Cybersecurity Consulting",
+      "description": "Providing security assessments, vulnerability analysis, and guidance to help protect your digital assets.",
+      "icon": "fa-solid fa-shield-halved",
+      "features": [
+        "Security vulnerability assessment",
+        "Network security analysis",
+        "Secure coding practices",
+        "Penetration testing basics",
+        "Security awareness training",
+        "Incident response guidance"
+      ]
+    }
+  ]
+}

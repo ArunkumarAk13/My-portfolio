@@ -1,0 +1,28 @@
+{
+  "education": [
+    {
+      "degree": "Bachelor of Engineering",
+      "field": "Computer Science and Engineering",
+      "institution": "SNS Institutions",
+      "location": "Coimbatore, Tamil Nadu",
+      "period": "2022 – 2026",
+      "gpa": "8.2 / 10",
+      "status": "Pursuing",
+      "description": "Pursuing BE in CSE with focus on software development, IoT systems, and cybersecurity. Active participant in technical clubs and hackathons.",
+      "courses": ["Data Structures", "Operating Systems", "Computer Networks", "Database Management", "Cybersecurity", "IoT Systems", "Machine Learning", "Web Technologies"],
+      "icon": "fa-solid fa-graduation-cap"
+    },
+    {
+      "degree": "Higher Secondary Certificate (HSC)",
+      "field": "Computer Science",
+      "institution": "Govt. Hr. Sec. School",
+      "location": "Tamil Nadu",
+      "period": "2020 – 2022",
+      "gpa": "85%",
+      "status": "Completed",
+      "description": "Completed HSC with Computer Science as core subject. Developed foundational programming skills in C++ and Python.",
+      "courses": ["Computer Science", "Mathematics", "Physics", "Chemistry"],
+      "icon": "fa-solid fa-school"
+    }
+  ]
+}

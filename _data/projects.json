@@ -1,0 +1,43 @@
+{
+  "projects": [
+    {
+      "id": "smart-notice-board",
+      "title": "Smart Notice Board",
+      "description": "IoT-based wireless notice board system that enables remote content updates without physical access.",
+      "longDescription": "An IoT-based wireless notice board that eliminates the need for physical notice boards. The system allows administrators to update content remotely via a web interface, with real-time display updates using ESP32 and wireless communication protocols. Designed for educational institutions and corporate environments.",
+      "category": "IoT",
+      "tags": ["IoT", "ESP32", "Embedded Systems", "Wireless", "Arduino"],
+      "image": "images/notice board.jpg",
+      "github": "#",
+      "demo": "#",
+      "featured": true,
+      "year": 2024
+    },
+    {
+      "id": "gas-leakage-detection",
+      "title": "Gas Leakage Detection",
+      "description": "Automated gas sensor detection system with real-time alerts and Python-based monitoring dashboard.",
+      "longDescription": "A smart safety system that detects hazardous gas leaks using MQ-series sensors integrated with a Raspberry Pi and Python backend. The system triggers immediate alerts via buzzer, LED indicators, and sends SMS/email notifications. A real-time dashboard built with Python displays sensor readings and historical data.",
+      "category": "IoT",
+      "tags": ["IoT", "Python", "Raspberry Pi", "Sensors", "Safety"],
+      "image": "images/gas.jpg",
+      "github": "#",
+      "demo": "#",
+      "featured": true,
+      "year": 2023
+    },
+    {
+      "id": "water-conservation-system",
+      "title": "Water Conservation System",
+      "description": "IoT-based water conservation and monitoring system with automated flow control.",
+      "longDescription": "An intelligent water management system that monitors water usage, detects wastage, and automates conservation through smart valve control. Built using Arduino, flow sensors, and soil moisture sensors, the system provides real-time monitoring and analytics to help reduce water consumption by up to 40%.",
+      "category": "IoT",
+      "tags": ["IoT", "Arduino", "Embedded Systems", "Automation", "Environment"],
+      "image": "images/waater.jpg",
+      "github": "#",
+      "demo": "#",
+      "featured": false,
+      "year": 2023
+    }
+  ]
+}

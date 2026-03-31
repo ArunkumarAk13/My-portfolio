@@ -1,0 +1,31 @@
+{
+  "experience": [
+    {
+      "role": "Freelance Web Developer",
+      "company": "Self-Employed",
+      "type": "Freelance",
+      "period": "2023 – Present",
+      "description": "Designing and developing responsive websites and web applications for clients across various industries. Delivering end-to-end solutions from UI design to deployment, with a focus on performance and user experience.",
+      "skills": ["HTML/CSS", "JavaScript", "PHP", "Bootstrap", "MySQL"],
+      "icon": "fa-solid fa-laptop-code"
+    },
+    {
+      "role": "Web Developer Intern",
+      "company": "TechSpark Solutions",
+      "type": "Internship",
+      "period": "Jun 2024 – Aug 2024",
+      "description": "Contributed to frontend development of enterprise web applications. Implemented responsive UI components, integrated REST APIs, and collaborated with senior developers to optimize application performance and code quality.",
+      "skills": ["ReactJS", "NodeJS", "REST APIs", "Git", "MongoDB"],
+      "icon": "fa-solid fa-briefcase"
+    },
+    {
+      "role": "IoT Project Lead",
+      "company": "SNS Institutions",
+      "type": "Academic",
+      "period": "2023 – 2024",
+      "description": "Led a team of 4 students in designing and implementing IoT-based solutions for real-world problems. Coordinated project milestones, conducted research, and presented findings at institution-level technical symposiums.",
+      "skills": ["IoT", "Python", "Arduino", "ESP32", "Project Management"],
+      "icon": "fa-solid fa-microchip"
+    }
+  ]
+}

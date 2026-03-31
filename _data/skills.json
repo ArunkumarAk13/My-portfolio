@@ -1,0 +1,44 @@
+{
+  "categories": [
+    {
+      "id": "frontend",
+      "label": "Frontend",
+      "skills": [
+        { "name": "HTML / CSS", "level": 90, "icon": "fa-brands fa-html5" },
+        { "name": "JavaScript", "level": 70, "icon": "fa-brands fa-js" },
+        { "name": "ReactJS", "level": 60, "icon": "fa-brands fa-react" },
+        { "name": "Bootstrap", "level": 80, "icon": "fa-brands fa-bootstrap" }
+      ]
+    },
+    {
+      "id": "backend",
+      "label": "Backend",
+      "skills": [
+        { "name": "Python", "level": 80, "icon": "fa-brands fa-python" },
+        { "name": "NodeJS", "level": 60, "icon": "fa-brands fa-node-js" },
+        { "name": "MongoDB", "level": 65, "icon": "fa-solid fa-database" },
+        { "name": "REST APIs", "level": 70, "icon": "fa-solid fa-plug" }
+      ]
+    },
+    {
+      "id": "tools",
+      "label": "Tools",
+      "skills": [
+        { "name": "Git", "level": 75, "icon": "fa-brands fa-git-alt" },
+        { "name": "VS Code", "level": 85, "icon": "fa-solid fa-code" },
+        { "name": "Linux", "level": 65, "icon": "fa-brands fa-linux" },
+        { "name": "PHP", "level": 60, "icon": "fa-brands fa-php" }
+      ]
+    },
+    {
+      "id": "iot",
+      "label": "IoT",
+      "skills": [
+        { "name": "Arduino", "level": 75, "icon": "fa-solid fa-microchip" },
+        { "name": "Raspberry Pi", "level": 65, "icon": "fa-solid fa-server" },
+        { "name": "Sensors", "level": 80, "icon": "fa-solid fa-wave-square" },
+        { "name": "ESP32", "level": 70, "icon": "fa-solid fa-wifi" }
+      ]
+    }
+  ]
+}
