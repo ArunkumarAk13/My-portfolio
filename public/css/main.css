@@ -231,18 +231,14 @@ p  { color: var(--text-secondary); }
 }
 
 /* ===== SCROLL REVEAL ===== */
-/* .js-ready is added by JS on load — content stays visible if JS fails */
 .js-ready .reveal {
-  opacity: 0;
   transform: translateY(30px);
   transition: opacity .7s ease, transform .7s ease;
 }
 .js-ready .reveal.reveal-right {
   transform: translateX(30px);
 }
-.reveal.visible,
 .js-ready .reveal.visible {
-  opacity: 1;
   transform: translate(0);
 }
 
