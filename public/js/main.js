@@ -423,10 +423,18 @@ document.documentElement.classList.add('js-ready');
         }
       });
     },
-    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0.05, rootMargin: '0px 0px 0px 0px' }
   );
 
   els.forEach(el => observer.observe(el));
+
+  // Fallback: force-reveal anything still hidden after 1.5 s
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+      el.style.transitionDelay = '0s';
+      el.classList.add('visible');
+    });
+  }, 1500);
 })();
 
 /* =====================================================================
