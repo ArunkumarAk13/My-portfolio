@@ -1,43 +1,67 @@
 {
   "categories": [
     {
-      "id": "frontend",
-      "label": "Frontend",
+      "id": "programming",
+      "label": "Programming",
       "skills": [
-        { "name": "HTML / CSS", "level": 90, "icon": "fa-brands fa-html5" },
-        { "name": "JavaScript", "level": 70, "icon": "fa-brands fa-js" },
-        { "name": "ReactJS", "level": 60, "icon": "fa-brands fa-react" },
-        { "name": "Bootstrap", "level": 80, "icon": "fa-brands fa-bootstrap" }
+        { "name": "HTML5", "level": 92, "icon": "fa-brands fa-html5" },
+        { "name": "CSS3", "level": 88, "icon": "fa-brands fa-css3-alt" },
+        { "name": "JavaScript", "level": 78, "icon": "fa-brands fa-js" },
+        { "name": "Python", "level": 80, "icon": "fa-brands fa-python" },
+        { "name": "PHP", "level": 72, "icon": "fa-brands fa-php" },
+        { "name": "C", "level": 70, "icon": "fa-solid fa-c" },
+        { "name": "C#", "level": 68, "icon": "fa-brands fa-microsoft" }
       ]
     },
     {
-      "id": "backend",
-      "label": "Backend",
+      "id": "appdev",
+      "label": "App Development",
       "skills": [
-        { "name": "Python", "level": 80, "icon": "fa-brands fa-python" },
-        { "name": "NodeJS", "level": 60, "icon": "fa-brands fa-node-js" },
-        { "name": "MongoDB", "level": 65, "icon": "fa-solid fa-database" },
-        { "name": "REST APIs", "level": 70, "icon": "fa-solid fa-plug" }
+        { "name": "React", "level": 68, "icon": "fa-brands fa-react" },
+        { "name": "React Native", "level": 72, "icon": "fa-brands fa-react" },
+        { "name": "Ember.js", "level": 70, "icon": "fa-brands fa-ember" },
+        { "name": "Node.js", "level": 65, "icon": "fa-brands fa-node-js" },
+        { "name": "Express.js", "level": 62, "icon": "fa-solid fa-server" },
+        { "name": "Bootstrap", "level": 82, "icon": "fa-brands fa-bootstrap" },
+        { "name": "jQuery", "level": 70, "icon": "fa-solid fa-code" },
+        { "name": "Handlebars", "level": 60, "icon": "fa-solid fa-file-code" },
+        { "name": ".NET", "level": 58, "icon": "fa-brands fa-microsoft" }
+      ]
+    },
+    {
+      "id": "database",
+      "label": "Database",
+      "skills": [
+        { "name": "MySQL", "level": 78, "icon": "fa-solid fa-database" },
+        { "name": "MongoDB", "level": 68, "icon": "fa-solid fa-leaf" },
+        { "name": "MariaDB", "level": 65, "icon": "fa-solid fa-database" },
+        { "name": "PostgreSQL", "level": 62, "icon": "fa-solid fa-database" }
       ]
     },
     {
       "id": "tools",
-      "label": "Tools",
+      "label": "Tools & DevOps",
       "skills": [
-        { "name": "Git", "level": 75, "icon": "fa-brands fa-git-alt" },
-        { "name": "VS Code", "level": 85, "icon": "fa-solid fa-code" },
-        { "name": "Linux", "level": 65, "icon": "fa-brands fa-linux" },
-        { "name": "PHP", "level": 60, "icon": "fa-brands fa-php" }
+        { "name": "Git", "level": 82, "icon": "fa-brands fa-git-alt" },
+        { "name": "GitHub", "level": 80, "icon": "fa-brands fa-github" },
+        { "name": "Docker", "level": 58, "icon": "fa-brands fa-docker" },
+        { "name": "Postman", "level": 78, "icon": "fa-solid fa-paper-plane" },
+        { "name": "Figma", "level": 68, "icon": "fa-brands fa-figma" },
+        { "name": "n8n", "level": 60, "icon": "fa-solid fa-diagram-project" },
+        { "name": "VS Code", "level": 88, "icon": "fa-solid fa-code" },
+        { "name": "Linux", "level": 68, "icon": "fa-brands fa-linux" }
       ]
     },
     {
-      "id": "iot",
-      "label": "IoT",
+      "id": "cybersecurity",
+      "label": "Cybersecurity",
       "skills": [
-        { "name": "Arduino", "level": 75, "icon": "fa-solid fa-microchip" },
-        { "name": "Raspberry Pi", "level": 65, "icon": "fa-solid fa-server" },
-        { "name": "Sensors", "level": 80, "icon": "fa-solid fa-wave-square" },
-        { "name": "ESP32", "level": 70, "icon": "fa-solid fa-wifi" }
+        { "name": "Wireshark", "level": 68, "icon": "fa-solid fa-network-wired" },
+        { "name": "Burp Suite", "level": 62, "icon": "fa-solid fa-shield-halved" },
+        { "name": "Nmap", "level": 68, "icon": "fa-solid fa-magnifying-glass" },
+        { "name": "Metasploit", "level": 58, "icon": "fa-solid fa-terminal" },
+        { "name": "Kali Linux", "level": 70, "icon": "fa-brands fa-linux" },
+        { "name": "OWASP", "level": 65, "icon": "fa-solid fa-lock" }
       ]
     }
   ]

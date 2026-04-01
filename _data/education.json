@@ -3,26 +3,38 @@
     {
       "degree": "Bachelor of Engineering",
       "field": "Computer Science and Engineering",
-      "institution": "SNS Institutions",
+      "institution": "SNS College of Engineering",
       "location": "Coimbatore, Tamil Nadu",
-      "period": "2022 – 2026",
-      "gpa": "8.2 / 10",
-      "status": "Pursuing",
-      "description": "Pursuing BE in CSE with focus on software development, IoT systems, and cybersecurity. Active participant in technical clubs and hackathons.",
-      "courses": ["Data Structures", "Operating Systems", "Computer Networks", "Database Management", "Cybersecurity", "IoT Systems", "Machine Learning", "Web Technologies"],
+      "period": "2021 – 2025",
+      "gpa": "8.15 / 10",
+      "status": "Completed",
+      "description": "Completed BE in CSE with focus on software development, application building, and cybersecurity. Active participant in technical clubs, hackathons, and sports.",
+      "courses": ["Data Structures", "Operating Systems", "Computer Networks", "Database Management", "Cybersecurity", "Web Technologies", "Machine Learning", "Software Engineering"],
       "icon": "fa-solid fa-graduation-cap"
     },
     {
-      "degree": "Higher Secondary Certificate (HSC)",
+      "degree": "Higher Secondary Certificate (HSC) – 12th",
       "field": "Computer Science",
-      "institution": "Govt. Hr. Sec. School",
-      "location": "Tamil Nadu",
-      "period": "2020 – 2022",
-      "gpa": "85%",
+      "institution": "CSI Matric Hr Sec School",
+      "location": "Arasumoodu, Kanyakumari District, Tamil Nadu",
+      "period": "2019 – 2021",
+      "gpa": "83%",
       "status": "Completed",
-      "description": "Completed HSC with Computer Science as core subject. Developed foundational programming skills in C++ and Python.",
+      "description": "Completed HSC with Computer Science as core subject. Built a strong foundation in programming and problem-solving.",
       "courses": ["Computer Science", "Mathematics", "Physics", "Chemistry"],
       "icon": "fa-solid fa-school"
+    },
+    {
+      "degree": "Secondary School Leaving Certificate (SSLC) – 10th",
+      "field": "General",
+      "institution": "CSI Matric Hr Sec School",
+      "location": "Arasumoodu, Kanyakumari District, Tamil Nadu",
+      "period": "2018 – 2019",
+      "gpa": "75%",
+      "status": "Completed",
+      "description": "Completed SSLC with consistent academic performance across all subjects.",
+      "courses": ["Mathematics", "Science", "English", "Social Science", "Tamil"],
+      "icon": "fa-solid fa-book-open"
     }
   ]
 }
