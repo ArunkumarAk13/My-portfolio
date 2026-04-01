@@ -17,9 +17,9 @@ define('SITE_AUTHOR',      'Arun Kumar S');
 define('SITE_EMAIL',       'arunkumar132004@gmail.com');
 define('SITE_URL',         '');   // Leave empty for relative URLs
 
-// Paths
-define('DATA_PATH',     PORTFOLIO_ROOT . '_data/');
-define('TEMPLATE_PATH', PORTFOLIO_ROOT . '_template/');
+// Paths — use dirname(__DIR__) for reliable cross-platform absolute paths
+define('DATA_PATH',     dirname(__DIR__) . DIRECTORY_SEPARATOR . '_data'     . DIRECTORY_SEPARATOR);
+define('TEMPLATE_PATH', dirname(__DIR__) . DIRECTORY_SEPARATOR . '_template' . DIRECTORY_SEPARATOR);
 define('PUBLIC_PATH',   'public/');
 define('CSS_PATH',      PUBLIC_PATH . 'css/');
 define('JS_PATH',       PUBLIC_PATH . 'js/');
@@ -38,6 +38,6 @@ define('FORMSPREE_ENDPOINT', 'https://formspree.io/f/xnnadjyd');
 define('FONT_AWESOME_CDN', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 define('GOOGLE_FONTS_URL', 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
-// Error reporting (set to 0 in production)
+// Error reporting — set display_errors to 0 in production
 error_reporting(E_ALL);
-ini_set('display_errors', 0);
+ini_set('display_errors', 1);

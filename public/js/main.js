@@ -5,6 +5,9 @@
 
 'use strict';
 
+// Mark document as JS-ready so reveal animations activate
+document.documentElement.classList.add('js-ready');
+
 /* =====================================================================
    1. THEME TOGGLE
    ===================================================================== */
