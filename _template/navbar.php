@@ -7,19 +7,21 @@ $socials = $p['socials'] ?? [];
 
     <!-- Logo -->
     <a href="#home" class="nav-logo" aria-label="Home">
-      <span class="logo-gradient">AK</span><span class="logo-text">run Kumar</span>
+      <span class="logo-badge">AK</span>
     </a>
 
-    <!-- Desktop Nav Links -->
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home"       class="nav-link active">Home</a></li>
-      <li><a href="#about"      class="nav-link">About</a></li>
-      <li><a href="#skills"     class="nav-link">Skills</a></li>
-      <li><a href="#experience" class="nav-link">Experience</a></li>
-      <li><a href="#projects"   class="nav-link">Projects</a></li>
-      <li><a href="#education"  class="nav-link">Education</a></li>
-      <li><a href="#contact"    class="nav-link">Contact</a></li>
-    </ul>
+    <!-- Desktop Nav Links (pill container) -->
+    <div class="nav-pill-wrap">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"       class="nav-link active">Home</a></li>
+        <li><a href="#about"      class="nav-link">About</a></li>
+        <li><a href="#skills"     class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education"  class="nav-link">Education</a></li>
+        <li><a href="#projects"   class="nav-link">Projects</a></li>
+        <li><a href="#contact"    class="nav-link">Contact</a></li>
+      </ul>
+    </div>
 
     <!-- Right Controls -->
     <div class="nav-actions">
@@ -52,8 +54,8 @@ $socials = $p['socials'] ?? [];
       <li><a href="#about"      class="mobile-nav-link">About</a></li>
       <li><a href="#skills"     class="mobile-nav-link">Skills</a></li>
       <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
-      <li><a href="#projects"   class="mobile-nav-link">Projects</a></li>
       <li><a href="#education"  class="mobile-nav-link">Education</a></li>
+      <li><a href="#projects"   class="mobile-nav-link">Projects</a></li>
       <li><a href="#contact"    class="mobile-nav-link">Contact</a></li>
     </ul>
     <div class="mobile-socials">
