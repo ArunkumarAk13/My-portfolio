@@ -31,13 +31,13 @@ $p    = $data['personal'];
   <?= load_template('navbar',     ['data' => $data]) ?>
 
   <main>
-    <?= load_template('hero',       ['data' => $data]) ?>
-    <?= load_template('about',      ['data' => $data]) ?>
-    <?= load_template('skills',     ['data' => $data]) ?>
-    <?= load_template('experience', ['data' => $data]) ?>
-    <?= load_template('projects',   ['data' => $data]) ?>
-    <?= load_template('education',  ['data' => $data]) ?>
-    <?= load_template('contact',    ['data' => $data]) ?>
+    <?= load_template('hero', $data) ?>
+    <?= load_template('about', $data) ?>
+    <?= load_template('skills', $data) ?>
+    <?= load_template('experience', $data) ?>
+    <?= load_template('projects', $data) ?>
+    <?= load_template('education', $data); ?>
+    <?= load_template('contact', $data) ?>
   </main>
 
   <?= load_template('footer',     ['data' => $data]) ?>

@@ -1,5 +1,5 @@
 <?php
-$eduData = $data['education']['education'] ?? [];
+$eduData = $education['education'] ?? [];
 ?>
 <section id="education" class="education-section section">
   <div class="container">
