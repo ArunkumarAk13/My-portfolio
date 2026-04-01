@@ -33,7 +33,6 @@ $p    = $data['personal'];
   <main>
     <?= load_template('hero',       ['data' => $data]) ?>
     <?= load_template('about',      ['data' => $data]) ?>
-    <?= load_template('services',   ['data' => $data]) ?>
     <?= load_template('skills',     ['data' => $data]) ?>
     <?= load_template('experience', ['data' => $data]) ?>
     <?= load_template('projects',   ['data' => $data]) ?>
