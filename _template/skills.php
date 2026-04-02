@@ -1,6 +1,23 @@
 <?php
 $skillData  = $data['skills']  ?? [];
 $categories = $skillData['categories'] ?? [];
+
+$catMeta = [
+  'programming'   => ['color' => '#6c63ff', 'icon' => 'fa-solid fa-code'],
+  'appdev'        => ['color' => '#a855f7', 'icon' => 'fa-solid fa-mobile-screen-button'],
+  'database'      => ['color' => '#06b6d4', 'icon' => 'fa-solid fa-database'],
+  'tools'         => ['color' => '#10b981', 'icon' => 'fa-solid fa-screwdriver-wrench'],
+  'cybersecurity' => ['color' => '#f59e0b', 'icon' => 'fa-solid fa-shield-halved'],
+];
+
+$skillLevel = fn(int $p) => match(true) {
+  $p >= 85 => 'Expert',
+  $p >= 70 => 'Proficient',
+  $p >= 55 => 'Familiar',
+  default  => 'Beginner',
+};
+
+$total = count($categories);
 ?>
 <section id="skills" class="skills-section section">
   <div class="container">
@@ -11,37 +28,47 @@ $categories = $skillData['categories'] ?? [];
       <p class="section-desc">A snapshot of the technologies I work with daily.</p>
     </div>
 
-    <!-- Tab Filters -->
-    <div class="skill-tabs reveal">
-      <button class="skill-tab active" data-tab="all">All</button>
-      <?php foreach ($categories as $cat): ?>
-      <button class="skill-tab" data-tab="<?= e($cat['id']) ?>"><?= e($cat['label']) ?></button>
+    <div class="skills-categories-grid">
+      <?php foreach ($categories as $i => $cat):
+        $meta = $catMeta[$cat['id']] ?? ['color' => '#6c63ff', 'icon' => 'fa-solid fa-star'];
+        $wide = ($total % 2 !== 0) && ($i === $total - 1);
+      ?>
+      <div class="skill-category reveal<?= $wide ? ' skill-category--wide' : '' ?>"
+           style="--cat-color:<?= $meta['color'] ?>">
+
+        <div class="cat-header">
+          <div class="cat-icon-wrap">
+            <i class="<?= e($meta['icon']) ?>"></i>
+          </div>
+          <h3 class="cat-title"><?= e($cat['label']) ?></h3>
+          <span class="cat-count"><?= count($cat['skills']) ?> skills</span>
+        </div>
+
+        <div class="cat-skills">
+          <?php foreach ($cat['skills'] as $skill): ?>
+          <div class="skill-row">
+            <div class="skill-row-top">
+              <div class="skill-row-left">
+                <span class="skill-row-icon">
+                  <i class="<?= e($skill['icon']) ?>"></i>
+                </span>
+                <span class="skill-row-name"><?= e($skill['name']) ?></span>
+              </div>
+              <div class="skill-row-right">
+                <span class="skill-level-badge"><?= $skillLevel((int)$skill['level']) ?></span>
+                <span class="skill-row-pct"><?= (int)$skill['level'] ?>%</span>
+              </div>
+            </div>
+            <div class="skill-track">
+              <div class="skill-fill" data-level="<?= (int)$skill['level'] ?>" style="width:0%"></div>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+
+      </div>
       <?php endforeach; ?>
     </div>
-
-    <!-- Skills Grid -->
-    <?php foreach ($categories as $cat): ?>
-    <div class="skills-group" data-group="<?= e($cat['id']) ?>">
-      <div class="skills-grid">
-        <?php foreach ($cat['skills'] as $skill): ?>
-        <div class="skill-card glass-card reveal">
-          <div class="skill-header">
-            <div class="skill-icon-wrap">
-              <i class="<?= e($skill['icon']) ?>"></i>
-            </div>
-            <div class="skill-info">
-              <span class="skill-name"><?= e($skill['name']) ?></span>
-              <span class="skill-percent"><?= (int)$skill['level'] ?>%</span>
-            </div>
-          </div>
-          <div class="skill-bar-wrap">
-            <div class="skill-bar" data-level="<?= (int)$skill['level'] ?>" style="width: 0%"></div>
-          </div>
-        </div>
-        <?php endforeach; ?>
-      </div>
-    </div>
-    <?php endforeach; ?>
 
   </div>
 </section>

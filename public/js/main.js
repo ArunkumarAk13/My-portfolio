@@ -265,7 +265,7 @@ document.documentElement.classList.add('js-ready');
    8. SKILL BARS ANIMATION (Intersection Observer)
    ===================================================================== */
 (function initSkillBars() {
-  const bars = document.querySelectorAll('.skill-bar');
+  const bars = document.querySelectorAll('.skill-fill');
   if (!bars.length) return;
 
   const observer = new IntersectionObserver(
@@ -283,37 +283,6 @@ document.documentElement.classList.add('js-ready');
   );
 
   bars.forEach(bar => observer.observe(bar));
-})();
-
-/* =====================================================================
-   9. SKILLS TAB FILTER
-   ===================================================================== */
-(function initSkillTabs() {
-  const tabs   = document.querySelectorAll('.skill-tab');
-  const groups = document.querySelectorAll('.skills-group');
-  if (!tabs.length) return;
-
-  const showAll = () => groups.forEach(g => g.classList.add('visible'));
-
-  // Show all on load
-  showAll();
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      const target = tab.dataset.tab;
-
-      if (target === 'all') {
-        showAll();
-      } else {
-        groups.forEach(g => {
-          g.classList.toggle('visible', g.dataset.group === target);
-        });
-      }
-    });
-  });
 })();
 
 /* =====================================================================
