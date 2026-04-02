@@ -10,41 +10,41 @@ $expData = $data['experience']['experience'] ?? [];
       <p class="section-desc">The roles and projects that have shaped my skills.</p>
     </div>
 
-    <div class="timeline">
-      <div class="timeline-line" id="timelineLine"></div>
+    <div class="exp-list">
+      <?php foreach ($expData as $exp): ?>
+      <div class="exp-item reveal">
 
-      <?php foreach ($expData as $i => $exp): ?>
-      <div class="timeline-item <?= $i % 2 === 0 ? 'timeline-left' : 'timeline-right' ?> reveal">
-        <div class="timeline-dot">
-          <i class="<?= e($exp['icon']) ?>"></i>
+        <div class="exp-track">
+          <div class="exp-dot">
+            <i class="<?= e($exp['icon']) ?>"></i>
+          </div>
         </div>
 
-        <div class="timeline-card glass-card">
-          <div class="timeline-card-header">
-            <div>
-              <h3 class="timeline-role"><?= e($exp['role']) ?></h3>
-              <div class="timeline-meta">
-                <span class="timeline-company">
-                  <i class="fa-solid fa-building"></i>
-                  <?= e($exp['company']) ?>
-                </span>
-                <span class="timeline-type <?= strtolower(e($exp['type'])) ?>"><?= e($exp['type']) ?></span>
-              </div>
-            </div>
-            <span class="timeline-period">
+        <div class="exp-card glass-card">
+          <div class="exp-top">
+            <span class="exp-period">
               <i class="fa-regular fa-calendar"></i>
               <?= e($exp['period']) ?>
             </span>
+            <span class="exp-type <?= strtolower(e($exp['type'])) ?>"><?= e($exp['type']) ?></span>
           </div>
 
-          <p class="timeline-desc"><?= e($exp['description']) ?></p>
+          <h3 class="exp-role"><?= e($exp['role']) ?></h3>
 
-          <div class="timeline-skills">
+          <div class="exp-company">
+            <i class="fa-solid fa-building"></i>
+            <?= e($exp['company']) ?>
+          </div>
+
+          <p class="exp-desc"><?= e($exp['description']) ?></p>
+
+          <div class="exp-skills">
             <?php foreach ($exp['skills'] as $skill): ?>
             <span class="skill-tag"><?= e($skill) ?></span>
             <?php endforeach; ?>
           </div>
         </div>
+
       </div>
       <?php endforeach; ?>
     </div>
