@@ -1293,14 +1293,8 @@ p  { color: var(--text-secondary); }
 
 /* ===== HIGHLIGHT / MAIN PROJECT CARD ===== */
 .project-highlight {
-  border: 2px solid transparent !important;
-  background-clip: padding-box !important;
+  border: none !important;
   position: relative;
-  box-shadow: 0 0 28px rgba(108,99,255,0.22), var(--shadow-md);
-}
-.project-highlight:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 48px rgba(108,99,255,0.40), 0 0 16px rgba(0,212,255,0.18), var(--shadow-lg);
 }
 .project-highlight::before {
   content: '';
