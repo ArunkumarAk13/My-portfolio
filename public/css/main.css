@@ -1274,21 +1274,49 @@ p  { color: var(--text-secondary); }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px,1fr));
-  gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 .project-card {
+  --mouse-x: 50%;
+  --mouse-y: 50%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   padding: 0;
-  transition: var(--transition);
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
   position: relative;
 }
 .project-card.hidden { display: none; }
-.project-card:hover  {
+.project-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--shadow-glow), var(--shadow-md);
+  animation: discoGlow 3s linear infinite;
+}
+
+/* Disco light — mouse-tracking inner spotlight */
+.project-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y),
+    rgba(108,99,255,0.16) 0%,
+    rgba(0,212,255,0.08) 40%,
+    transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.project-card:hover::after { opacity: 1; }
+
+/* Disco light — colour-cycling border glow */
+@keyframes discoGlow {
+  0%   { box-shadow: 0 8px 40px rgba(108,99,255,0.50), var(--shadow-md); }
+  25%  { box-shadow: 0 8px 40px rgba(0,212,255,0.50),  var(--shadow-md); }
+  50%  { box-shadow: 0 8px 40px rgba(255,107,107,0.45), var(--shadow-md); }
+  75%  { box-shadow: 0 8px 40px rgba(67,233,123,0.45),  var(--shadow-md); }
+  100% { box-shadow: 0 8px 40px rgba(108,99,255,0.50), var(--shadow-md); }
 }
 
 /* ===== HIGHLIGHT / MAIN PROJECT CARD ===== */
@@ -2052,6 +2080,7 @@ a.contact-card-value:hover { color: var(--accent); }
   .about-img-frame { max-width: 100%; }
 
   .services-grid { grid-template-columns: 1fr 1fr; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
 
   .exp-item { grid-template-columns: 44px 1fr; gap: 0 20px; }
   .exp-item::before { left: 21px; }
