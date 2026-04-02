@@ -1293,18 +1293,23 @@ p  { color: var(--text-secondary); }
 
 /* ===== HIGHLIGHT / MAIN PROJECT CARD ===== */
 .project-highlight {
-  border: none !important;
   position: relative;
 }
 .project-highlight::before {
   content: '';
   position: absolute;
-  inset: -2px;
+  inset: 0;
   border-radius: inherit;
+  padding: 2px;
   background: linear-gradient(135deg, #6c63ff 0%, #00d4ff 50%, #6c63ff 100%);
   background-size: 200% 200%;
   animation: highlightShift 5s ease infinite;
-  z-index: -1;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 5;
 }
 .highlight-border-anim { display: none; }
 @keyframes highlightShift {
