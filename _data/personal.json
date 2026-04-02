@@ -19,7 +19,7 @@
     { "value": "8.2", "label": "GPA" },
     { "value": "5+", "label": "Tech Stacks" }
   ],
-  "resume": "./images/pdf/ARUN KUMAR resume.pdf",
+  "resume": "./pdfs/ARUN KUMAR resume.pdf",
   "socials": [
     {
       "platform": "GitHub",
