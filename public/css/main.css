@@ -1278,45 +1278,17 @@ p  { color: var(--text-secondary); }
   gap: 24px;
 }
 .project-card {
-  --mouse-x: 50%;
-  --mouse-y: 50%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   padding: 0;
-  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: var(--transition);
   position: relative;
 }
 .project-card.hidden { display: none; }
 .project-card:hover {
-  transform: translateY(-8px);
-  animation: discoGlow 3s linear infinite;
-}
-
-/* Disco light — mouse-tracking inner spotlight */
-.project-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y),
-    rgba(108,99,255,0.16) 0%,
-    rgba(0,212,255,0.08) 40%,
-    transparent 60%);
-  opacity: 0;
-  transition: opacity 0.35s ease;
-  pointer-events: none;
-  z-index: 2;
-}
-.project-card:hover::after { opacity: 1; }
-
-/* Disco light — colour-cycling border glow */
-@keyframes discoGlow {
-  0%   { box-shadow: 0 8px 40px rgba(108,99,255,0.50), var(--shadow-md); }
-  25%  { box-shadow: 0 8px 40px rgba(0,212,255,0.50),  var(--shadow-md); }
-  50%  { box-shadow: 0 8px 40px rgba(255,107,107,0.45), var(--shadow-md); }
-  75%  { box-shadow: 0 8px 40px rgba(67,233,123,0.45),  var(--shadow-md); }
-  100% { box-shadow: 0 8px 40px rgba(108,99,255,0.50), var(--shadow-md); }
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-glow), var(--shadow-md);
 }
 
 /* ===== HIGHLIGHT / MAIN PROJECT CARD ===== */
@@ -1324,19 +1296,24 @@ p  { color: var(--text-secondary); }
   border: 2px solid transparent !important;
   background-clip: padding-box !important;
   position: relative;
+  box-shadow: 0 0 28px rgba(108,99,255,0.22), var(--shadow-md);
+}
+.project-highlight:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 48px rgba(108,99,255,0.40), 0 0 16px rgba(0,212,255,0.18), var(--shadow-lg);
 }
 .project-highlight::before {
   content: '';
   position: absolute;
   inset: -2px;
   border-radius: inherit;
-  background: linear-gradient(270deg, #6c63ff, #f7971e, #ff6b6b, #43e97b, #6c63ff);
-  background-size: 400% 400%;
-  animation: borderFlow 4s ease infinite;
+  background: linear-gradient(135deg, #6c63ff 0%, #00d4ff 50%, #6c63ff 100%);
+  background-size: 200% 200%;
+  animation: highlightShift 5s ease infinite;
   z-index: -1;
 }
 .highlight-border-anim { display: none; }
-@keyframes borderFlow {
+@keyframes highlightShift {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
