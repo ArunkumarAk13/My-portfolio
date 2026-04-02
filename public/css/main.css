@@ -231,14 +231,16 @@ p  { color: var(--text-secondary); }
 }
 
 /* ===== SCROLL REVEAL ===== */
-.js-ready .reveal {
+.reveal {
+  opacity: 0;
   transform: translateY(30px);
   transition: opacity .7s ease, transform .7s ease;
 }
-.js-ready .reveal.reveal-right {
+.reveal.reveal-right {
   transform: translateX(30px);
 }
-.js-ready .reveal.visible {
+.reveal.visible {
+  opacity: 1;
   transform: translate(0);
 }
 
@@ -342,73 +344,16 @@ p  { color: var(--text-secondary); }
   top: 0; left: 0; right: 0;
   z-index: 900;
   height: var(--nav-h);
-  transition: top .45s cubic-bezier(.4,0,.2,1),
-              left .45s cubic-bezier(.4,0,.2,1),
-              right .45s cubic-bezier(.4,0,.2,1),
-              width .45s cubic-bezier(.4,0,.2,1),
-              transform .45s cubic-bezier(.4,0,.2,1),
-              height .45s cubic-bezier(.4,0,.2,1),
-              border-radius .45s cubic-bezier(.4,0,.2,1),
-              background .45s ease, box-shadow .45s ease,
-              padding .45s ease, border .45s ease;
+  transition: var(--transition);
 }
-
-/* Gradient fade from top for hero context */
-.navbar::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 120px;
-  background: linear-gradient(180deg, rgba(6,6,20,.65) 0%, transparent 100%);
-  pointer-events: none;
-  z-index: -1;
-  transition: opacity .45s ease;
-}
-.navbar.scrolled::before { opacity: 0; }
-
-/* Floating centered pill on scroll */
 .navbar.scrolled {
-  top: 12px;
-  left: 50%;
-  right: auto;
-  transform: translateX(-50%);
-  width: max-content;
-  height: 58px;
-  padding: 0 6px;
-  border-radius: 100px;
-  background: rgba(10,10,22,.88);
-  backdrop-filter: blur(28px) saturate(180%);
-  -webkit-backdrop-filter: blur(28px) saturate(180%);
-  border: 1px solid rgba(255,255,255,.12);
-  box-shadow: 0 8px 32px rgba(0,0,0,.28),
-              0 0 0 1px rgba(108,99,255,.15),
-              inset 0 1px 0 rgba(255,255,255,.07);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-sm);
+  height: 62px;
 }
-.navbar.scrolled .nav-container {
-  padding-inline: 8px;
-  gap: 16px;
-  max-width: none;
-}
-/* Inner pill merges into outer pill when scrolled */
-.navbar.scrolled .nav-links {
-  background: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  border-color: transparent;
-  box-shadow: none;
-}
-
-/* Light theme overrides */
-[data-theme="light"] .navbar::before {
-  background: linear-gradient(180deg, rgba(240,242,255,.6) 0%, transparent 100%);
-}
-[data-theme="light"] .navbar.scrolled {
-  background: rgba(245,246,255,.92);
-  border-color: rgba(108,99,255,.18);
-  box-shadow: 0 8px 32px rgba(108,99,255,.12),
-              0 0 0 1px rgba(108,99,255,.08);
-}
-
 .nav-container {
   max-width: var(--container-max);
   margin-inline: auto;
@@ -467,14 +412,12 @@ p  { color: var(--text-secondary); }
   align-items: center;
   gap: 2px;
   padding: 5px;
-  background: rgba(255,255,255,.07);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255,255,255,.13);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
   border-radius: 50px;
   list-style: none;
-  box-shadow: 0 4px 20px rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.08);
-  transition: background .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 .nav-link {
   position: relative;
@@ -1670,25 +1613,6 @@ a.contact-card-value:hover { color: var(--accent); }
 
   .nav-pill-wrap, .btn-hire { display: none; }
   .hamburger { display: flex; }
-
-  /* On mobile keep navbar full-width even when scrolled */
-  .navbar.scrolled {
-    left: 0;
-    right: 0;
-    transform: none;
-    width: auto;
-    border-radius: 0;
-    padding: 0;
-    top: 0;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-  }
-  .navbar.scrolled .nav-container {
-    padding-inline: 20px;
-    gap: 24px;
-    max-width: none;
-  }
 
   .hero-inner {
     grid-template-columns: 1fr;
