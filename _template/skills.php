@@ -19,28 +19,38 @@ $catMeta = [
       <p class="section-desc">A snapshot of the technologies I work with daily.</p>
     </div>
 
-    <div class="skills-categories-grid">
-      <?php foreach ($categories as $cat):
-        $meta    = $catMeta[$cat['id']] ?? ['color' => '#6c63ff', 'icon' => 'fa-solid fa-code'];
-        $color   = $meta['color'];
-        $catIcon = $meta['icon'];
+    <!-- Category tabs -->
+    <div class="skills-tabs reveal">
+      <?php foreach ($categories as $i => $cat):
+        $meta = $catMeta[$cat['id']] ?? ['color' => '#6c63ff', 'icon' => 'fa-solid fa-code'];
       ?>
-      <div class="skill-category reveal" style="--cat-color:<?= $color ?>">
+      <button class="skills-tab<?= $i === 0 ? ' active' : '' ?>"
+              data-tab="<?= $cat['id'] ?>"
+              style="--tab-color:<?= $meta['color'] ?>">
+        <i class="<?= $meta['icon'] ?>"></i>
+        <span><?= e($cat['label']) ?></span>
+      </button>
+      <?php endforeach; ?>
+    </div>
 
-        <div class="cat-header">
-          <span class="cat-icon-wrap"><i class="<?= $catIcon ?>"></i></span>
-          <h3 class="cat-title"><?= e($cat['label']) ?></h3>
-        </div>
-
-        <div class="cat-skills">
-          <?php foreach ($cat['skills'] as $skill): ?>
-          <div class="skill-chip">
-            <span class="skill-chip-icon"><i class="<?= e($skill['icon']) ?>"></i></span>
-            <span class="skill-chip-name"><?= e($skill['name']) ?></span>
+    <!-- Skill panels -->
+    <div class="skills-panels">
+      <?php foreach ($categories as $i => $cat):
+        $meta  = $catMeta[$cat['id']] ?? ['color' => '#6c63ff', 'icon' => 'fa-solid fa-code'];
+        $color = $meta['color'];
+      ?>
+      <div class="skills-panel<?= $i === 0 ? ' active' : '' ?>"
+           id="panel-<?= $cat['id'] ?>"
+           style="--cat-color:<?= $color ?>">
+        <?php foreach ($cat['skills'] as $skill): ?>
+        <div class="skill-tile">
+          <div class="skill-tile-glow"></div>
+          <div class="skill-tile-icon">
+            <i class="<?= e($skill['icon']) ?>"></i>
           </div>
-          <?php endforeach; ?>
+          <span class="skill-tile-name"><?= e($skill['name']) ?></span>
         </div>
-
+        <?php endforeach; ?>
       </div>
       <?php endforeach; ?>
     </div>

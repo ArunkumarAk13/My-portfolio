@@ -263,6 +263,25 @@ document.documentElement.classList.add('js-ready');
 
 
 /* =====================================================================
+   9. SKILLS TAB SWITCHER
+   ===================================================================== */
+(function initSkillTabs() {
+  const tabs   = document.querySelectorAll('.skills-tab');
+  const panels = document.querySelectorAll('.skills-panel');
+  if (!tabs.length) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      const panel = document.getElementById('panel-' + tab.dataset.tab);
+      if (panel) panel.classList.add('active');
+    });
+  });
+})();
+
+/* =====================================================================
    10. PROJECTS FILTER
    ===================================================================== */
 (function initProjectFilter() {
