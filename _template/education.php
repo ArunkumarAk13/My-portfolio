@@ -1,5 +1,7 @@
 <?php
-$eduData = $education['education'] ?? [];
+$eduData  = $education['education'] ?? [];
+$academic = array_values(array_filter($eduData, fn($e) => ($e['type'] ?? 'academic') === 'academic'));
+$courses  = array_values(array_filter($eduData, fn($e) => ($e['type'] ?? 'academic') === 'course'));
 ?>
 <section id="education" class="education-section section">
   <div class="container">
@@ -10,54 +12,50 @@ $eduData = $education['education'] ?? [];
       <p class="section-desc">The foundation behind my technical knowledge.</p>
     </div>
 
-    <div class="education-grid">
-      <?php foreach ($eduData as $i => $edu): ?>
-      <div class="edu-card glass-card reveal" style="--delay: <?= $i * 0.15 ?>s">
+    <div class="edu-split-grid">
 
-        <div class="edu-card-header">
-          <div class="edu-icon-wrap">
-            <i class="<?= e($edu['icon']) ?>"></i>
+      <!-- Left: Academic Education -->
+      <div class="edu-split-col">
+        <p class="edu-split-col-label"><i class="fa-solid fa-graduation-cap"></i> Academic</p>
+        <?php foreach ($academic as $i => $edu): ?>
+        <div class="edu-split-item reveal" style="--delay: <?= $i * 0.12 ?>s">
+          <div class="edu-split-meta">
+            <span class="edu-tl-period"><?= e($edu['period']) ?></span>
+            <span class="edu-split-org"><?= e($edu['institution']) ?></span>
           </div>
-          <div class="edu-status <?= strtolower(e($edu['status'])) ?>">
-            <?= e($edu['status']) ?>
-          </div>
+          <h3 class="edu-split-title"><?= e($edu['degree']) ?></h3>
+          <p class="edu-split-field"><?= e($edu['field']) ?></p>
+          <p class="edu-split-desc"><?= e($edu['description']) ?></p>
+          <?php if (!empty($edu['gpa'])): ?>
+          <span class="edu-split-gpa"><i class="fa-solid fa-star"></i> <?= e($edu['gpa']) ?></span>
+          <?php endif; ?>
         </div>
+        <?php endforeach; ?>
+      </div>
 
-        <div class="edu-body">
-          <h3 class="edu-degree"><?= e($edu['degree']) ?></h3>
-          <p class="edu-field"><?= e($edu['field']) ?></p>
-          <p class="edu-institution">
-            <i class="fa-solid fa-university"></i>
-            <?= e($edu['institution']) ?>
-          </p>
-
-          <div class="edu-meta">
-            <span class="edu-period">
-              <i class="fa-regular fa-calendar"></i>
-              <?= e($edu['period']) ?>
-            </span>
-            <span class="edu-gpa">
-              <i class="fa-solid fa-star"></i>
-              <?= e($edu['gpa']) ?>
-            </span>
+      <!-- Right: Courses & Certifications -->
+      <div class="edu-split-col">
+        <p class="edu-split-col-label"><i class="fa-solid fa-book-open"></i> Courses & Certifications</p>
+        <?php foreach ($courses as $i => $edu): ?>
+        <div class="edu-split-item reveal" style="--delay: <?= $i * 0.12 ?>s">
+          <div class="edu-split-meta">
+            <span class="edu-tl-period"><?= e($edu['period']) ?></span>
+            <span class="edu-split-org"><?= e($edu['institution']) ?></span>
           </div>
-
-          <p class="edu-desc"><?= e($edu['description']) ?></p>
-
+          <h3 class="edu-split-title"><?= e($edu['degree']) ?></h3>
+          <p class="edu-split-field"><?= e($edu['field']) ?></p>
+          <p class="edu-split-desc"><?= e($edu['description']) ?></p>
           <?php if (!empty($edu['courses'])): ?>
-          <div class="edu-courses">
-            <p class="edu-courses-label">Key Courses:</p>
-            <div class="edu-course-tags">
-              <?php foreach (array_slice($edu['courses'], 0, 6) as $course): ?>
-              <span class="skill-tag"><?= e($course) ?></span>
-              <?php endforeach; ?>
-            </div>
+          <div class="edu-split-tags">
+            <?php foreach (array_slice($edu['courses'], 0, 5) as $tag): ?>
+            <span class="skill-tag"><?= e($tag) ?></span>
+            <?php endforeach; ?>
           </div>
           <?php endif; ?>
         </div>
-
+        <?php endforeach; ?>
       </div>
-      <?php endforeach; ?>
+
     </div>
 
   </div>

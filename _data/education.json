@@ -8,6 +8,7 @@
       "period": "2021 – 2025",
       "gpa": "8.15 / 10",
       "status": "Completed",
+      "type": "academic",
       "description": "Completed BE in CSE with focus on software development, application building, and cybersecurity. Active participant in technical clubs, hackathons, and sports.",
       "courses": ["Data Structures", "Operating Systems", "Computer Networks", "Database Management", "Cybersecurity", "Web Technologies", "Machine Learning", "Software Engineering"],
       "icon": "fa-solid fa-graduation-cap"
@@ -20,6 +21,7 @@
       "period": "2019 – 2021",
       "gpa": "83%",
       "status": "Completed",
+      "type": "academic",
       "description": "Completed HSC with Computer Science as core subject. Built a strong foundation in programming and problem-solving.",
       "courses": ["Computer Science", "Mathematics", "Physics", "Chemistry"],
       "icon": "fa-solid fa-school"
@@ -32,9 +34,36 @@
       "period": "2018 – 2019",
       "gpa": "75%",
       "status": "Completed",
+      "type": "academic",
       "description": "Completed SSLC with consistent academic performance across all subjects.",
       "courses": ["Mathematics", "Science", "English", "Social Science", "Tamil"],
       "icon": "fa-solid fa-book-open"
+    },
+    {
+      "degree": "Cyber Tech Mastery",
+      "field": "Cybersecurity & Ethical Hacking",
+      "institution": "Selfmade Ninja Academy",
+      "location": "Online",
+      "period": "2023 – 2024",
+      "gpa": null,
+      "status": "Completed",
+      "type": "course",
+      "description": "Completed the Cyber Tech Mastery program — an intensive hands-on course covering offensive and defensive security. Trained in exploitation techniques, binary analysis, reverse engineering, vulnerability assessment, and ethical hacking with real-world labs.",
+      "courses": ["Exploit Discovery", "Binary Exploitation", "Reverse Engineering", "Debugging Mastery", "Vulnerability Assessment", "Ethical Hacking", "Networking", "Programming Fundamentals", "Advanced Programming", "Tools Building", "Practical Skill Training", "Web Development"],
+      "icon": "fa-solid fa-user-ninja"
+    },
+    {
+      "degree": "Full Stack Development",
+      "field": "Web Development – MERN Stack",
+      "institution": "Udemy",
+      "location": "Online",
+      "period": "2023",
+      "gpa": null,
+      "status": "Completed",
+      "type": "course",
+      "description": "Completed a comprehensive Full Stack Development course covering the complete MERN stack. Built real-world projects with React for frontend, Node.js and Express.js for backend, and MongoDB for database. Covers authentication, REST API design, deployment, and modern JS patterns.",
+      "courses": ["React", "Node.js", "Express.js", "MongoDB", "JavaScript", "REST APIs", "HTML/CSS", "Git"],
+      "icon": "fa-solid fa-code"
     }
   ]
 }
