@@ -33,6 +33,9 @@
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="<?= FONT_AWESOME_CDN ?>">
 
+  <!-- Devicons (brand tech icons) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="<?= CSS_PATH ?>main.css">
 

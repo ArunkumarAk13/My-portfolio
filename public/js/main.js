@@ -261,29 +261,6 @@ document.documentElement.classList.add('js-ready');
   setTimeout(type, 800);
 })();
 
-/* =====================================================================
-   8. SKILL BARS ANIMATION (Intersection Observer)
-   ===================================================================== */
-(function initSkillBars() {
-  const bars = document.querySelectorAll('.skill-fill');
-  if (!bars.length) return;
-
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const bar   = entry.target;
-          const level = bar.dataset.level || '0';
-          bar.style.width = level + '%';
-          observer.unobserve(bar);
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
-
-  bars.forEach(bar => observer.observe(bar));
-})();
 
 /* =====================================================================
    10. PROJECTS FILTER

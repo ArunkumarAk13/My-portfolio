@@ -4,64 +4,64 @@
       "id": "programming",
       "label": "Programming",
       "skills": [
-        { "name": "HTML5", "level": 92, "icon": "fa-brands fa-html5" },
-        { "name": "CSS3", "level": 88, "icon": "fa-brands fa-css3-alt" },
-        { "name": "JavaScript", "level": 78, "icon": "fa-brands fa-js" },
-        { "name": "Python", "level": 80, "icon": "fa-brands fa-python" },
-        { "name": "PHP", "level": 72, "icon": "fa-brands fa-php" },
-        { "name": "C", "level": 70, "icon": "fa-solid fa-c" },
-        { "name": "C#", "level": 68, "icon": "fa-brands fa-microsoft" }
+        { "name": "HTML5",      "icon": "devicon-html5-plain colored" },
+        { "name": "CSS3",       "icon": "devicon-css3-plain colored" },
+        { "name": "JavaScript", "icon": "devicon-javascript-plain colored" },
+        { "name": "Python",     "icon": "devicon-python-plain colored" },
+        { "name": "PHP",        "icon": "devicon-php-plain colored" },
+        { "name": "C",          "icon": "devicon-c-plain colored" },
+        { "name": "C#",         "icon": "devicon-csharp-plain colored" }
       ]
     },
     {
       "id": "appdev",
       "label": "App Development",
       "skills": [
-        { "name": "React", "level": 68, "icon": "fa-brands fa-react" },
-        { "name": "React Native", "level": 72, "icon": "fa-brands fa-react" },
-        { "name": "Ember.js", "level": 70, "icon": "fa-brands fa-ember" },
-        { "name": "Node.js", "level": 65, "icon": "fa-brands fa-node-js" },
-        { "name": "Express.js", "level": 62, "icon": "fa-solid fa-server" },
-        { "name": "Bootstrap", "level": 82, "icon": "fa-brands fa-bootstrap" },
-        { "name": "jQuery", "level": 70, "icon": "fa-solid fa-code" },
-        { "name": "Handlebars", "level": 60, "icon": "fa-solid fa-file-code" },
-        { "name": ".NET", "level": 58, "icon": "fa-brands fa-microsoft" }
+        { "name": "React",       "icon": "devicon-react-original colored" },
+        { "name": "React Native","icon": "devicon-react-original colored" },
+        { "name": "Node.js",     "icon": "devicon-nodejs-plain colored" },
+        { "name": "Express.js",  "icon": "devicon-express-original colored" },
+        { "name": "Bootstrap",   "icon": "devicon-bootstrap-plain colored" },
+        { "name": "jQuery",      "icon": "devicon-jquery-plain colored" },
+        { "name": "Ember.js",    "icon": "fa-brands fa-ember" },
+        { "name": "Handlebars",  "icon": "devicon-handlebars-plain colored" },
+        { "name": ".NET",        "icon": "devicon-dot-net-plain colored" }
       ]
     },
     {
       "id": "database",
       "label": "Database",
       "skills": [
-        { "name": "MySQL", "level": 78, "icon": "fa-solid fa-database" },
-        { "name": "MongoDB", "level": 68, "icon": "fa-solid fa-leaf" },
-        { "name": "MariaDB", "level": 65, "icon": "fa-solid fa-database" },
-        { "name": "PostgreSQL", "level": 62, "icon": "fa-solid fa-database" }
+        { "name": "MySQL",      "icon": "devicon-mysql-plain colored" },
+        { "name": "MongoDB",    "icon": "devicon-mongodb-plain colored" },
+        { "name": "MariaDB",    "icon": "devicon-mariadb-plain colored" },
+        { "name": "PostgreSQL", "icon": "devicon-postgresql-plain colored" }
       ]
     },
     {
       "id": "tools",
       "label": "Tools & DevOps",
       "skills": [
-        { "name": "Git", "level": 82, "icon": "fa-brands fa-git-alt" },
-        { "name": "GitHub", "level": 80, "icon": "fa-brands fa-github" },
-        { "name": "Docker", "level": 58, "icon": "fa-brands fa-docker" },
-        { "name": "Postman", "level": 78, "icon": "fa-solid fa-paper-plane" },
-        { "name": "Figma", "level": 68, "icon": "fa-brands fa-figma" },
-        { "name": "n8n", "level": 60, "icon": "fa-solid fa-diagram-project" },
-        { "name": "VS Code", "level": 88, "icon": "fa-solid fa-code" },
-        { "name": "Linux", "level": 68, "icon": "fa-brands fa-linux" }
+        { "name": "Git",     "icon": "devicon-git-plain colored" },
+        { "name": "GitHub",  "icon": "devicon-github-original colored" },
+        { "name": "Docker",  "icon": "devicon-docker-plain colored" },
+        { "name": "Postman", "icon": "devicon-postman-plain colored" },
+        { "name": "Figma",   "icon": "devicon-figma-plain colored" },
+        { "name": "VS Code", "icon": "devicon-vscode-plain colored" },
+        { "name": "Linux",   "icon": "devicon-linux-plain colored" },
+        { "name": "n8n",     "icon": "fa-solid fa-diagram-project" }
       ]
     },
     {
       "id": "cybersecurity",
       "label": "Cybersecurity",
       "skills": [
-        { "name": "Wireshark", "level": 68, "icon": "fa-solid fa-network-wired" },
-        { "name": "Burp Suite", "level": 62, "icon": "fa-solid fa-shield-halved" },
-        { "name": "Nmap", "level": 68, "icon": "fa-solid fa-magnifying-glass" },
-        { "name": "Metasploit", "level": 58, "icon": "fa-solid fa-terminal" },
-        { "name": "Kali Linux", "level": 70, "icon": "fa-brands fa-linux" },
-        { "name": "OWASP", "level": 65, "icon": "fa-solid fa-lock" }
+        { "name": "Wireshark",   "icon": "fa-solid fa-network-wired" },
+        { "name": "Burp Suite",  "icon": "fa-solid fa-shield-halved" },
+        { "name": "Nmap",        "icon": "fa-solid fa-magnifying-glass" },
+        { "name": "Metasploit",  "icon": "fa-solid fa-terminal" },
+        { "name": "Kali Linux",  "icon": "devicon-linux-plain colored" },
+        { "name": "OWASP",       "icon": "fa-solid fa-lock" }
       ]
     }
   ]

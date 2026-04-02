@@ -3,14 +3,12 @@ $skillData  = $data['skills']  ?? [];
 $categories = $skillData['categories'] ?? [];
 
 $catMeta = [
-  'programming'   => '#6c63ff',
-  'appdev'        => '#a855f7',
-  'database'      => '#06b6d4',
-  'tools'         => '#10b981',
-  'cybersecurity' => '#f59e0b',
+  'programming'   => ['color' => '#6c63ff', 'icon' => 'fa-solid fa-code'],
+  'appdev'        => ['color' => '#a855f7', 'icon' => 'fa-solid fa-layer-group'],
+  'database'      => ['color' => '#06b6d4', 'icon' => 'fa-solid fa-database'],
+  'tools'         => ['color' => '#10b981', 'icon' => 'fa-solid fa-wrench'],
+  'cybersecurity' => ['color' => '#f59e0b', 'icon' => 'fa-solid fa-shield-halved'],
 ];
-
-$total = count($categories);
 ?>
 <section id="skills" class="skills-section section">
   <div class="container">
@@ -22,27 +20,23 @@ $total = count($categories);
     </div>
 
     <div class="skills-categories-grid">
-      <?php foreach ($categories as $i => $cat):
-        $color = $catMeta[$cat['id']] ?? '#6c63ff';
-        $wide  = ($total % 2 !== 0) && ($i === $total - 1);
+      <?php foreach ($categories as $cat):
+        $meta    = $catMeta[$cat['id']] ?? ['color' => '#6c63ff', 'icon' => 'fa-solid fa-code'];
+        $color   = $meta['color'];
+        $catIcon = $meta['icon'];
       ?>
-      <div class="skill-category reveal<?= $wide ? ' skill-category--wide' : '' ?>"
-           style="--cat-color:<?= $color ?>">
+      <div class="skill-category reveal" style="--cat-color:<?= $color ?>">
 
         <div class="cat-header">
+          <span class="cat-icon-wrap"><i class="<?= $catIcon ?>"></i></span>
           <h3 class="cat-title"><?= e($cat['label']) ?></h3>
         </div>
 
         <div class="cat-skills">
           <?php foreach ($cat['skills'] as $skill): ?>
-          <div class="skill-row">
-            <div class="skill-row-top">
-              <span class="skill-row-name"><?= e($skill['name']) ?></span>
-              <span class="skill-row-pct"><?= (int)$skill['level'] ?>%</span>
-            </div>
-            <div class="skill-track">
-              <div class="skill-fill" data-level="<?= (int)$skill['level'] ?>" style="width:0%"></div>
-            </div>
+          <div class="skill-chip">
+            <span class="skill-chip-icon"><i class="<?= e($skill['icon']) ?>"></i></span>
+            <span class="skill-chip-name"><?= e($skill['name']) ?></span>
           </div>
           <?php endforeach; ?>
         </div>
