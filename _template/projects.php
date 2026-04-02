@@ -170,15 +170,3 @@ foreach ($projData as $proj) {
 
   </div>
 </section>
-
-<script>
-(function () {
-  document.querySelectorAll('#projectsGrid .project-card').forEach(function (card) {
-    card.addEventListener('mousemove', function (e) {
-      var r = card.getBoundingClientRect();
-      card.style.setProperty('--mouse-x', (e.clientX - r.left) + 'px');
-      card.style.setProperty('--mouse-y', (e.clientY - r.top)  + 'px');
-    });
-  });
-})();
-</script>
