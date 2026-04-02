@@ -33,11 +33,22 @@ foreach ($projData as $proj) {
     <div class="projects-grid" id="projectsGrid">
       <?php foreach ($projData as $proj): ?>
       <?php
-        $catLower = strtolower($proj['category'] ?? 'other');
-        $isFeat   = !empty($proj['featured']);
+        $catLower  = strtolower($proj['category'] ?? 'other');
+        $isFeat    = !empty($proj['featured']);
+        $isHighlight = !empty($proj['highlight']);
+        $hasGithub = !empty($proj['github']) && $proj['github'] !== '#';
+        $hasDemo   = !empty($proj['demo']) && $proj['demo'] !== '#';
+        $hasWebsite  = !empty($proj['website']);
+        $hasPlaystore = !empty($proj['playstore']);
+        $hasPdf    = !empty($proj['pdf']);
+        $hasReport = !empty($proj['report']);
       ?>
-      <div class="project-card glass-card reveal"
+      <div class="project-card glass-card reveal <?= $isHighlight ? 'project-highlight' : '' ?>"
            data-category="<?= e($catLower) ?>">
+
+        <?php if ($isHighlight): ?>
+        <div class="highlight-border-anim"></div>
+        <?php endif; ?>
 
         <!-- Image -->
         <div class="project-img-wrap">
@@ -51,12 +62,31 @@ foreach ($projData as $proj) {
             <div class="project-overlay-content">
               <h3 class="project-overlay-title"><?= e($proj['title']) ?></h3>
               <div class="project-overlay-btns">
+                <?php if ($hasGithub): ?>
                 <a href="<?= e($proj['github']) ?>" class="btn-icon" target="_blank" rel="noopener" aria-label="GitHub">
                   <i class="fa-brands fa-github"></i>
                 </a>
+                <?php endif; ?>
+                <?php if ($hasWebsite): ?>
+                <a href="<?= e($proj['website']) ?>" class="btn-icon" target="_blank" rel="noopener" aria-label="Website">
+                  <i class="fa-solid fa-globe"></i>
+                </a>
+                <?php endif; ?>
+                <?php if ($hasPlaystore): ?>
+                <a href="<?= e($proj['playstore']) ?>" class="btn-icon" target="_blank" rel="noopener" aria-label="Play Store">
+                  <i class="fa-brands fa-google-play"></i>
+                </a>
+                <?php endif; ?>
+                <?php if ($hasDemo): ?>
                 <a href="<?= e($proj['demo']) ?>" class="btn-icon" target="_blank" rel="noopener" aria-label="Live Demo">
                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
+                <?php endif; ?>
+                <?php if ($hasPdf): ?>
+                <a href="<?= e($proj['pdf']) ?>" class="btn-icon" target="_blank" rel="noopener" aria-label="Research Paper">
+                  <i class="fa-solid fa-file-pdf"></i>
+                </a>
+                <?php endif; ?>
               </div>
             </div>
           </div>
@@ -64,6 +94,12 @@ foreach ($projData as $proj) {
           <?php if ($isFeat): ?>
           <span class="project-featured-badge">
             <i class="fa-solid fa-star"></i> Featured
+          </span>
+          <?php endif; ?>
+
+          <?php if ($isHighlight): ?>
+          <span class="project-main-badge">
+            <i class="fa-solid fa-crown"></i> Main Project
           </span>
           <?php endif; ?>
         </div>
@@ -83,13 +119,49 @@ foreach ($projData as $proj) {
             <?php endforeach; ?>
           </div>
 
+          <!-- Action Buttons -->
           <div class="project-links">
+            <?php if ($hasGithub): ?>
             <a href="<?= e($proj['github']) ?>" class="btn btn-sm btn-outline" target="_blank" rel="noopener">
               <i class="fa-brands fa-github"></i> Code
             </a>
+            <?php endif; ?>
+
+            <?php if ($hasWebsite): ?>
+            <a href="<?= e($proj['website']) ?>" class="btn btn-sm btn-primary" target="_blank" rel="noopener">
+              <i class="fa-solid fa-globe"></i> Website
+            </a>
+            <?php endif; ?>
+
+            <?php if ($hasPlaystore): ?>
+            <a href="<?= e($proj['playstore']) ?>" class="btn btn-sm btn-playstore" target="_blank" rel="noopener">
+              <i class="fa-brands fa-google-play"></i> Play Store
+            </a>
+            <?php endif; ?>
+
+            <?php if ($hasDemo): ?>
             <a href="<?= e($proj['demo']) ?>" class="btn btn-sm btn-primary" target="_blank" rel="noopener">
               <i class="fa-solid fa-eye"></i> Demo
             </a>
+            <?php endif; ?>
+
+            <?php if ($hasPdf): ?>
+            <a href="<?= e($proj['pdf']) ?>" class="btn btn-sm btn-pdf" target="_blank" rel="noopener">
+              <i class="fa-solid fa-file-pdf"></i> Paper
+            </a>
+            <?php endif; ?>
+
+            <?php if ($hasReport): ?>
+            <a href="<?= e($proj['report']) ?>" class="btn btn-sm btn-report" target="_blank" rel="noopener">
+              <i class="fa-solid fa-file-lines"></i> Report
+            </a>
+            <?php endif; ?>
+
+            <?php if (!$hasGithub && !$hasWebsite && !$hasPlaystore && !$hasDemo && !$hasPdf && !$hasReport): ?>
+            <span class="btn btn-sm btn-outline btn-disabled">
+              <i class="fa-solid fa-lock"></i> Private
+            </span>
+            <?php endif; ?>
           </div>
         </div>
       </div>
