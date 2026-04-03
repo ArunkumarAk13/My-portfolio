@@ -33,12 +33,6 @@ $socials = $p['socials'] ?? [];
         </span>
       </button>
 
-      <!-- Hire Me -->
-      <a href="#contact" class="btn-hire">
-        <i class="fa-solid fa-paper-plane"></i>
-        <span>Hire Me</span>
-      </a>
-
       <!-- Hamburger -->
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>

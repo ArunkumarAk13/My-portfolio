@@ -460,24 +460,6 @@ p  { color: var(--text-secondary); }
 [data-theme="light"] .toggle-sun  { opacity: 1; transform: rotate(0); }
 [data-theme="light"] .toggle-moon { opacity: 0; transform: rotate(-90deg); }
 
-/* Hire Me */
-.btn-hire {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 20px;
-  background: var(--gradient-primary);
-  color: #fff;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: .875rem;
-  box-shadow: 0 4px 15px rgba(108,99,255,.3);
-  transition: var(--transition-bounce);
-}
-.btn-hire:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(108,99,255,.5);
-}
 
 /* Hamburger */
 .hamburger {
@@ -578,27 +560,6 @@ p  { color: var(--text-secondary); }
   padding-bottom: 80px;
 }
 
-/* Hero Badge */
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 16px;
-  background: rgba(108,99,255,.1);
-  border: 1px solid rgba(108,99,255,.25);
-  border-radius: 50px;
-  font-size: .8rem;
-  font-weight: 600;
-  color: var(--accent);
-  margin-bottom: 20px;
-}
-.badge-dot {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: #22c55e;
-  animation: blink 1.4s ease-in-out infinite;
-}
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
 
 .hero-greeting {
   font-size: 1.1rem;
@@ -794,40 +755,6 @@ p  { color: var(--text-secondary); }
   pointer-events: none;
 }
 
-/* Stats float */
-.about-stats-float {
-  position: absolute;
-  bottom: -20px;
-  right: -20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  z-index: 10;
-}
-.stat-badge {
-  padding: 16px 20px;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: var(--glass-blur);
-  border-radius: var(--radius-md);
-  text-align: center;
-  min-width: 100px;
-}
-.stat-value {
-  display: block;
-  font-size: 1.8rem;
-  font-weight: 800;
-  font-family: var(--font-display);
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.stat-label {
-  font-size: .75rem;
-  color: var(--text-muted);
-  font-weight: 500;
-}
 
 /* About content */
 .about-sub {
@@ -2027,7 +1954,7 @@ a.contact-card-value:hover { color: var(--accent); }
 @media (max-width: 992px) {
   :root { --section-py: 72px; }
 
-  .nav-links, .btn-hire { display: none; }
+  .nav-links { display: none; }
   .hamburger { display: flex; }
 
   .hero-inner {
@@ -2039,20 +1966,10 @@ a.contact-card-value:hover { color: var(--accent); }
   .hero-visual  { order: 1; }
   .hero-cta, .hero-socials { justify-content: center; }
   .hero-bio { max-width: 100%; }
-  .hero-badge { justify-content: center; }
-
   .profile-frame { width: 280px; height: 280px; }
   .float-badge   { display: none; }
 
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .about-stats-float {
-    position: static;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-    margin-top: 20px;
-  }
   .about-img-frame { max-width: 100%; }
 
   .services-grid { grid-template-columns: 1fr 1fr; }
@@ -2090,7 +2007,6 @@ a.contact-card-value:hover { color: var(--accent); }
   .footer-inner { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom { justify-content: center; text-align: center; }
 
-  .about-stats-float { grid-template-columns: 1fr 1fr; position: static; }
 }
 
 @media (max-width: 576px) {
@@ -2100,10 +2016,7 @@ a.contact-card-value:hover { color: var(--accent); }
   .hero-inner { padding-top: calc(var(--nav-h) + 20px); }
   .profile-frame { width: 220px; height: 220px; }
 
-  .stat-badge { min-width: 80px; padding: 12px 14px; }
-  .stat-value { font-size: 1.4rem; }
-
-  .exp-item { grid-template-columns: 36px 1fr; gap: 0 14px; }
+.exp-item { grid-template-columns: 36px 1fr; gap: 0 14px; }
   .exp-item::before { left: 17px; }
   .exp-card { padding: 20px 18px 18px; }
   .exp-item:hover .exp-card { transform: none; box-shadow: var(--shadow-sm); }
@@ -2122,7 +2035,6 @@ a.contact-card-value:hover { color: var(--accent); }
 }
 
 /* Stagger for hero content */
-.hero-content .hero-badge      { animation: fadeInUp .6s ease .1s both; }
 .hero-content .hero-greeting   { animation: fadeInUp .6s ease .2s both; }
 .hero-content .hero-name       { animation: fadeInUp .6s ease .3s both; }
 .hero-content .hero-typed-wrap { animation: fadeInUp .6s ease .4s both; }
