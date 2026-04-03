@@ -16,11 +16,6 @@ $rolesJson = json_encode($roles);
 
     <!-- Left Column -->
     <div class="hero-content reveal">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        <span><?= e($p['availability'] ?? 'Open to Opportunities') ?></span>
-      </div>
-
       <p class="hero-greeting">Hello, I'm</p>
 
       <h1 class="hero-name">

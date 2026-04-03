@@ -25,15 +25,7 @@ $techChips = ['HTML/CSS', 'JavaScript', 'ReactJS', 'Python', 'NodeJS', 'MongoDB'
           <div class="about-img-border"></div>
         </div>
 
-        <!-- Stats floating badges -->
-        <div class="about-stats-float">
-          <?php foreach ($stats as $stat): ?>
-          <div class="stat-badge reveal">
-            <span class="stat-value" data-count="<?= e(preg_replace('/[^0-9.]/', '', $stat['value'])) ?>"><?= e($stat['value']) ?></span>
-            <span class="stat-label"><?= e($stat['label']) ?></span>
-          </div>
-          <?php endforeach; ?>
-        </div>
+
       </div>
 
       <!-- Right: Content -->
