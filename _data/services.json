@@ -1,7 +1,6 @@
 {
   "services": [
     {
-      "id": "web-development",
       "title": "Web Development",
       "description": "Creating responsive, fast, and visually stunning websites and web applications tailored to your business needs.",
       "icon": "fa-solid fa-globe",
@@ -15,7 +14,6 @@
       ]
     },
     {
-      "id": "iot-development",
       "title": "IoT Development",
       "description": "Building smart, connected systems and embedded solutions using modern IoT platforms and microcontrollers.",
       "icon": "fa-solid fa-microchip",
@@ -29,7 +27,6 @@
       ]
     },
     {
-      "id": "cybersecurity",
       "title": "Cybersecurity Consulting",
       "description": "Providing security assessments, vulnerability analysis, and guidance to help protect your digital assets.",
       "icon": "fa-solid fa-shield-halved",
