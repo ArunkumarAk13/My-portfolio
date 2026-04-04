@@ -36,6 +36,13 @@ $expData = $data['experience']['experience'] ?? [];
             <?= e($exp['company']) ?>
           </div>
 
+          <?php if (!empty($exp['location'])): ?>
+          <div class="exp-location">
+            <i class="fa-solid fa-location-dot"></i>
+            <?= e($exp['location']) ?>
+          </div>
+          <?php endif; ?>
+
           <p class="exp-desc"><?= e($exp['description']) ?></p>
 
           <div class="exp-skills">
