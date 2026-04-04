@@ -1075,6 +1075,18 @@ p  { color: var(--text-secondary); }
   color: var(--accent-2);
   font-size: .8rem;
 }
+.exp-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .8rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+.exp-location i {
+  color: var(--accent-1);
+  font-size: .75rem;
+}
 
 /* Description */
 .exp-desc {
@@ -1591,6 +1603,17 @@ p  { color: var(--text-secondary); }
   font-size: .82rem;
   color: var(--text-muted);
   font-weight: 500;
+}
+.edu-split-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: .78rem;
+  color: var(--text-muted);
+}
+.edu-split-location i {
+  color: var(--accent-1);
+  font-size: .72rem;
 }
 
 .edu-split-title {
