@@ -1,10 +1,8 @@
 {
   "projects": [
     {
-      "id": "localhub",
       "title": "LocalHub",
       "description": "A full-stack marketplace platform connecting local shopkeepers directly with buyers — built with React Native, Node.js, and PostgreSQL.",
-      "longDescription": "LocalHub is a private, production-grade marketplace application that bridges local shopkeepers and buyers in real-time. The platform features a React Native mobile app for both Android and iOS, a Node.js REST API backend, and a PostgreSQL database. Shopkeepers can list products, manage inventory, and receive orders while buyers discover local shops nearby.",
       "category": "Software",
       "tags": ["React Native", "Node.js", "PostgreSQL", "Mobile App", "Marketplace"],
       "image": "images/localhub.jpg",
@@ -17,10 +15,8 @@
       "year": 2025
     },
     {
-      "id": "workgen",
       "title": "WorkGen",
       "description": "Data-driven visualization tool that converts CSV files into interactive pie, donut, and bar charts with NLP-powered summaries.",
-      "longDescription": "WorkGen is a Python and React-based application that takes CSV data files and automatically generates rich interactive visualizations including pie charts, donut charts, and bar charts using Streamlit, Pandas, Matplotlib, and Plotly. It also uses NLP via NLTK and Sumy to auto-summarize datasets. Includes AutoViz for automatic EDA.",
       "category": "Software",
       "tags": ["Python", "Streamlit", "Pandas", "Plotly", "NLP", "React"],
       "image": "images/workgen.jpg",
@@ -33,10 +29,8 @@
       "year": 2024
     },
     {
-      "id": "smart-notice-board",
       "title": "Smart Notice Board",
       "description": "IoT-based wireless notice board system that enables remote content updates without physical access.",
-      "longDescription": "An IoT-based wireless notice board that eliminates the need for physical notice boards. The system allows administrators to update content remotely via a web interface, with real-time display updates using ESP32 and wireless communication protocols.",
       "category": "IoT",
       "tags": ["IoT", "ESP32", "Embedded Systems", "Wireless", "Arduino"],
       "image": "images/notice board.jpg",
@@ -48,10 +42,8 @@
       "year": 2024
     },
     {
-      "id": "gas-leakage-detection",
       "title": "Gas Leakage Detection",
       "description": "Automated gas sensor detection system with real-time alerts and Python-based monitoring dashboard.",
-      "longDescription": "A smart safety system that detects hazardous gas leaks using MQ-series sensors integrated with a Raspberry Pi and Python backend. The system triggers immediate alerts via buzzer, LED indicators, and sends SMS/email notifications.",
       "category": "IoT",
       "tags": ["IoT", "Python", "Raspberry Pi", "Sensors", "Safety"],
       "image": "images/gas.jpg",
@@ -63,10 +55,8 @@
       "year": 2023
     },
     {
-      "id": "water-conservation-system",
       "title": "Water Conservation System",
       "description": "IoT-based water conservation and monitoring system with automated flow control.",
-      "longDescription": "An intelligent water management system that monitors water usage, detects wastage, and automates conservation through smart valve control using Arduino, flow sensors, and soil moisture sensors.",
       "category": "IoT",
       "tags": ["IoT", "Arduino", "Embedded Systems", "Automation", "Environment"],
       "image": "images/waater.jpg",
