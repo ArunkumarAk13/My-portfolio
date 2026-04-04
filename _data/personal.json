@@ -12,13 +12,6 @@
   "email": "arunkumar132004@gmail.com",
   "phone": "+91 9498821183",
   "location": "India",
-  "availability": "Open to Opportunities",
-  "stats": [
-    { "value": "3+", "label": "Projects" },
-    { "value": "2+", "label": "Years Coding" },
-    { "value": "8.2", "label": "GPA" },
-    { "value": "5+", "label": "Tech Stacks" }
-  ],
   "resume": "./pdfs/ARUN KUMAR resume.pdf",
   "socials": [
     {
