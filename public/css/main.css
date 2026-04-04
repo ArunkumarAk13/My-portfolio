@@ -653,64 +653,6 @@ p  { color: var(--text-secondary); }
   object-position: top center;
 }
 
-/* Floating badges */
-.float-badge {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: var(--glass-blur);
-  border-radius: 50px;
-  font-size: .78rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  z-index: 3;
-  white-space: nowrap;
-}
-.float-badge i { color: var(--accent); }
-.float-badge--tl { top: 20px;  left: -30px;  animation: floatA 3s ease-in-out infinite; }
-.float-badge--br { bottom: 40px; right: -20px; animation: floatB 3.5s ease-in-out infinite; }
-.float-badge--tr { top: 60px;  right: -30px; animation: floatA 4s ease-in-out infinite reverse; }
-
-@keyframes floatA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
-@keyframes floatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(10px)} }
-
-/* Scroll indicator */
-.scroll-indicator {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  font-size: .75rem;
-  color: var(--text-muted);
-  animation: floatA 2s ease-in-out infinite;
-}
-.scroll-mouse {
-  width: 24px; height: 38px;
-  border: 2px solid var(--glass-border);
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  padding-top: 6px;
-}
-.scroll-wheel {
-  width: 4px; height: 8px;
-  background: var(--accent);
-  border-radius: 99px;
-  animation: scrollDown 1.6s ease-in-out infinite;
-}
-@keyframes scrollDown {
-  0%   { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(12px); opacity: 0; }
-}
-
 /* ===== ABOUT ===== */
 .about-section { background: var(--bg-secondary); }
 .about-grid {
@@ -1946,9 +1888,6 @@ a.contact-card-value:hover { color: var(--accent); }
 @media (max-width: 1200px) {
   .hero-inner { gap: 40px; }
   .profile-frame { width: 320px; height: 320px; }
-  .float-badge--tl { left: -10px; }
-  .float-badge--tr { right: -10px; }
-  .float-badge--br { right: -10px; }
 }
 
 @media (max-width: 992px) {
@@ -1967,7 +1906,6 @@ a.contact-card-value:hover { color: var(--accent); }
   .hero-cta, .hero-socials { justify-content: center; }
   .hero-bio { max-width: 100%; }
   .profile-frame { width: 280px; height: 280px; }
-  .float-badge   { display: none; }
 
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .about-img-frame { max-width: 100%; }
@@ -2002,8 +1940,6 @@ a.contact-card-value:hover { color: var(--accent); }
   .form-row { grid-template-columns: 1fr; }
 
   .hero-name { font-size: clamp(2rem, 10vw, 3rem); }
-  .scroll-indicator { display: none; }
-
   .footer-inner { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom { justify-content: center; text-align: center; }
 

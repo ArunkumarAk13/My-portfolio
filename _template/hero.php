@@ -63,30 +63,6 @@ $rolesJson = json_encode($roles);
         <div class="profile-hex-wrap">
           <img src="images/profile.JPG" alt="<?= e($name) ?>" class="profile-img" loading="eager">
         </div>
-
-        <!-- Floating Badges -->
-        <div class="float-badge float-badge--tl">
-          <i class="fa-solid fa-code"></i>
-          <span>Web Dev</span>
-        </div>
-        <div class="float-badge float-badge--br">
-          <i class="fa-solid fa-microchip"></i>
-          <span>IoT</span>
-        </div>
-        <div class="float-badge float-badge--tr">
-          <i class="fa-solid fa-shield-halved"></i>
-          <span>Security</span>
-        </div>
-      </div>
     </div>
-
-  </div>
-
-  <!-- Scroll Indicator -->
-  <div class="scroll-indicator" aria-hidden="true">
-    <div class="scroll-mouse">
-      <div class="scroll-wheel"></div>
-    </div>
-    <span>Scroll Down</span>
   </div>
 </section>
