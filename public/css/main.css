@@ -709,27 +709,6 @@ p  { color: var(--text-secondary); }
   line-height: 1.8;
 }
 
-.tech-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-block: 24px;
-}
-.tech-chip {
-  padding: 6px 16px;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 50px;
-  font-size: .82rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  transition: var(--transition);
-}
-.tech-chip:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: rgba(108,99,255,.1);
-}
 .about-actions {
   display: flex;
   flex-wrap: wrap;

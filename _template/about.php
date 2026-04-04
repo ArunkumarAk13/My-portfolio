@@ -5,7 +5,6 @@ $bio    = $p['bio']    ?? '';
 $stats  = $p['stats']  ?? [];
 $resume = $p['resume'] ?? '#';
 
-$techChips = ['HTML/CSS', 'JavaScript', 'ReactJS', 'Python', 'NodeJS', 'MongoDB', 'Bootstrap', 'Git', 'Arduino', 'ESP32', 'PHP', 'REST APIs'];
 ?>
 <section id="about" class="about-section section">
   <div class="container">
@@ -41,13 +40,6 @@ $techChips = ['HTML/CSS', 'JavaScript', 'ReactJS', 'Python', 'NodeJS', 'MongoDB'
           maintaining a GPA of 8.2. My passion lies at the intersection of software development
           and hardware, building solutions that bridge the digital and physical worlds.
         </p>
-
-        <!-- Tech chips -->
-        <div class="tech-chips">
-          <?php foreach ($techChips as $chip): ?>
-          <span class="tech-chip"><?= e($chip) ?></span>
-          <?php endforeach; ?>
-        </div>
 
         <div class="about-actions">
           <a href="<?= e($resume) ?>" class="btn btn-primary" download>
