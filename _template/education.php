@@ -22,6 +22,9 @@ $courses  = array_values(array_filter($eduData, fn($e) => ($e['type'] ?? 'academ
           <div class="edu-split-meta">
             <span class="edu-tl-period"><?= e($edu['period']) ?></span>
             <span class="edu-split-org"><?= e($edu['institution']) ?></span>
+            <?php if (!empty($edu['location'])): ?>
+            <span class="edu-split-location"><i class="fa-solid fa-location-dot"></i> <?= e($edu['location']) ?></span>
+            <?php endif; ?>
           </div>
           <h3 class="edu-split-title"><?= e($edu['degree']) ?></h3>
           <p class="edu-split-field"><?= e($edu['field']) ?></p>
@@ -41,6 +44,9 @@ $courses  = array_values(array_filter($eduData, fn($e) => ($e['type'] ?? 'academ
           <div class="edu-split-meta">
             <span class="edu-tl-period"><?= e($edu['period']) ?></span>
             <span class="edu-split-org"><?= e($edu['institution']) ?></span>
+            <?php if (!empty($edu['location'])): ?>
+            <span class="edu-split-location"><i class="fa-solid fa-location-dot"></i> <?= e($edu['location']) ?></span>
+            <?php endif; ?>
           </div>
           <h3 class="edu-split-title"><?= e($edu['degree']) ?></h3>
           <p class="edu-split-field"><?= e($edu['field']) ?></p>
