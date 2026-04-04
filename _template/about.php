@@ -2,7 +2,6 @@
 $p      = $data['personal'] ?? [];
 $name   = $p['name']   ?? 'Arun Kumar S';
 $bio    = $p['bio']    ?? '';
-$stats  = $p['stats']  ?? [];
 $resume = $p['resume'] ?? '#';
 
 ?>
