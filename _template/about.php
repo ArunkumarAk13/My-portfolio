@@ -36,8 +36,8 @@ $resume = $p['resume'] ?? '#';
         <p class="about-text"><?= e($bio) ?></p>
 
         <p class="about-text">
-          I'm currently pursuing my BE in Computer Science at SNS Institutions (2022-2026),
-          maintaining a GPA of 8.2. My passion lies at the intersection of software development
+          I'm a Computer Science graduate (BE CSE, SNS Institutions, 2022–2026) now working
+          as a professional developer. My passion lies at the intersection of software development
           and hardware, building solutions that bridge the digital and physical worlds.
         </p>
 
