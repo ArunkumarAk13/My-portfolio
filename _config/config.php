@@ -31,8 +31,16 @@ define('ENABLE_CURSOR_GLOW',  true);
 define('ENABLE_LOADING_SCREEN', true);
 define('DEFAULT_THEME',       'dark');   // 'dark' or 'light'
 
-// Node.js mailer server endpoint (mailer/server.js running on port 3001)
-define('CONTACT_ENDPOINT', '/api/contact');
+// Contact form endpoint (PHP mail handler)
+define('FORMSPREE_ENDPOINT', 'send-mail.php');
+
+
+// Gmail App Password — loaded from secrets.php (gitignored, never commit)
+if (file_exists(__DIR__ . '/secrets.php')) {
+    require_once __DIR__ . '/secrets.php';
+} elseif (!defined('GMAIL_APP_PASSWORD')) {
+    define('GMAIL_APP_PASSWORD', '');
+}
 
 
 // External CDN URLs
