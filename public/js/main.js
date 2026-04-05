@@ -407,8 +407,6 @@ document.documentElement.classList.add('js-ready');
    ===================================================================== */
 (function initContactForm() {
   const form      = document.getElementById('contactForm');
-  const successEl = document.getElementById('formSuccess');
-  const errorEl   = document.getElementById('formError');
   const submitBtn = document.getElementById('submitBtn');
   if (!form) return;
 
@@ -422,16 +420,36 @@ document.documentElement.classList.add('js-ready');
     if (btnLoading) btnLoading.hidden = !loading;
   };
 
-  const showAlert = (el, show) => {
-    if (!el) return;
-    el.hidden = !show;
+  const showToast = (type, message) => {
+    let container = document.getElementById('toastContainer');
+    if (!container) {
+      container = document.createElement('div');
+      container.id = 'toastContainer';
+      document.body.appendChild(container);
+    }
+
+    const toast = document.createElement('div');
+    toast.className = `toast toast--${type}`;
+    toast.innerHTML = `
+      <i class="fa-solid ${type === 'success' ? 'fa-circle-check' : 'fa-circle-xmark'}"></i>
+      <span>${message}</span>
+      <button class="toast-close" aria-label="Dismiss"><i class="fa-solid fa-xmark"></i></button>
+    `;
+
+    container.appendChild(toast);
+    requestAnimationFrame(() => toast.classList.add('toast--visible'));
+
+    const dismiss = () => {
+      toast.classList.remove('toast--visible');
+      toast.addEventListener('transitionend', () => toast.remove(), { once: true });
+    };
+
+    toast.querySelector('.toast-close').addEventListener('click', dismiss);
+    setTimeout(dismiss, 4000);
   };
 
   form.addEventListener('submit', async e => {
     e.preventDefault();
-
-    showAlert(successEl, false);
-    showAlert(errorEl,   false);
     setLoading(true);
 
     const endpoint = form.dataset.endpoint;
@@ -451,13 +469,13 @@ document.documentElement.classList.add('js-ready');
       const data = await res.json().catch(() => ({}));
 
       if (res.ok && data.ok) {
-        showAlert(successEl, true);
+        showToast('success', "Message sent! I'll get back to you soon.");
         form.reset();
       } else {
-        showAlert(errorEl, true);
+        showToast('error', 'Something went wrong. Please try again.');
       }
     } catch (_) {
-      showAlert(errorEl, true);
+      showToast('error', 'Something went wrong. Please try again.');
     } finally {
       setLoading(false);
     }

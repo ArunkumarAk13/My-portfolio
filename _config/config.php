@@ -32,7 +32,6 @@ define('ENABLE_LOADING_SCREEN', true);
 define('DEFAULT_THEME',       'dark');   // 'dark' or 'light'
 
 // Contact form endpoint (PHP mail handler)
-define('MAIL_ENDPOINT',    'send-mail.php');
 define('CONTACT_ENDPOINT', 'send-mail.php');
 
 

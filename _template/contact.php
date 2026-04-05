@@ -76,16 +76,6 @@ $socials = $p['socials']  ?? [];
         <div class="contact-form-card glass-card">
           <h3 class="form-title">Send a Message</h3>
 
-          <!-- Alert Messages -->
-          <div id="formSuccess" class="form-alert form-alert--success" role="alert" hidden>
-            <i class="fa-solid fa-circle-check"></i>
-            <span>Message sent! I'll get back to you soon.</span>
-          </div>
-          <div id="formError" class="form-alert form-alert--error" role="alert" hidden>
-            <i class="fa-solid fa-circle-xmark"></i>
-            <span>Something went wrong. Please try again.</span>
-          </div>
-
           <form id="contactForm" data-endpoint="<?= CONTACT_ENDPOINT ?>" novalidate>
 
             <div class="form-row">
