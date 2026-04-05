@@ -403,7 +403,7 @@ document.documentElement.classList.add('js-ready');
 })();
 
 /* =====================================================================
-   14. CONTACT FORM (Formspree AJAX)
+   14. CONTACT FORM (PHPMailer AJAX)
    ===================================================================== */
 (function initContactForm() {
   const form      = document.getElementById('contactForm');
