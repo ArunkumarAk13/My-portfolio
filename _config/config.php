@@ -32,7 +32,7 @@ define('ENABLE_LOADING_SCREEN', true);
 define('DEFAULT_THEME',       'dark');   // 'dark' or 'light'
 
 // Contact form endpoint (PHP mail handler)
-define('FORMSPREE_ENDPOINT', 'send-mail.php');
+define('MAIL_ENDPOINT', 'send-mail.php');
 
 
 // Gmail App Password — loaded from secrets.php (gitignored, never commit)
