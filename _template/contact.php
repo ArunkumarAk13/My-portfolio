@@ -86,8 +86,7 @@ $socials = $p['socials']  ?? [];
             <span>Something went wrong. Please try again.</span>
           </div>
 
-          <form id="contactForm" action="<?= FORMSPREE_ENDPOINT ?>" method="POST" novalidate>
-            <input type="hidden" name="_subject" value="New Contact from Portfolio">
+          <form id="contactForm" data-endpoint="<?= CONTACT_ENDPOINT ?>" novalidate>
 
             <div class="form-row">
               <div class="form-group">

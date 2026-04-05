@@ -434,11 +434,19 @@ document.documentElement.classList.add('js-ready');
     showAlert(errorEl,   false);
     setLoading(true);
 
+    const endpoint = form.dataset.endpoint;
+    const payload  = {
+      name:    form.querySelector('[name="name"]').value.trim(),
+      email:   form.querySelector('[name="email"]').value.trim(),
+      subject: form.querySelector('[name="subject"]').value.trim(),
+      message: form.querySelector('[name="message"]').value.trim(),
+    };
+
     try {
-      const res  = await fetch(form.action, {
+      const res  = await fetch(endpoint, {
         method:  'POST',
-        body:    new FormData(form),
-        headers: { Accept: 'application/json' },
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body:    JSON.stringify(payload),
       });
       const data = await res.json().catch(() => ({}));
 
@@ -446,8 +454,6 @@ document.documentElement.classList.add('js-ready');
         showAlert(successEl, true);
         form.reset();
       } else {
-        const errSpan = errorEl && errorEl.querySelector('span');
-        if (errSpan && data.error) errSpan.textContent = data.error;
         showAlert(errorEl, true);
       }
     } catch (_) {

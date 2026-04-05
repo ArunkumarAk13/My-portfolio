@@ -31,8 +31,8 @@ define('ENABLE_CURSOR_GLOW',  true);
 define('ENABLE_LOADING_SCREEN', true);
 define('DEFAULT_THEME',       'dark');   // 'dark' or 'light'
 
-// Contact form endpoint (PHP mail handler)
-define('FORMSPREE_ENDPOINT', 'send-mail.php');
+// Node.js mailer server endpoint (mailer/server.js running on port 3001)
+define('CONTACT_ENDPOINT', '/api/contact');
 
 
 // External CDN URLs
