@@ -49,7 +49,7 @@ My-portfolio/
 │   ├── projects.php            ← Filterable project card grid
 │   ├── education.php           ← Academic + courses split layout
 │   ├── services.php            ← Service offering cards
-│   ├── contact.php             ← Contact info + Formspree-powered form
+│   ├── contact.php             ← Contact info + PHPMailer-powered form
 │   └── footer.php              ← Brand, quick links, contact info, copyright
 │
 ├── public/
@@ -139,7 +139,7 @@ Defines every constant used across the project. Nothing is hard-coded in templat
 | `ENABLE_CURSOR_GLOW` | `true` — controls trailing cursor effect |
 | `ENABLE_LOADING_SCREEN` | `true` — controls loading overlay |
 | `DEFAULT_THEME` | `"dark"` |
-| `FORMSPREE_ENDPOINT` | Formspree URL for contact form |
+| `MAIL_ENDPOINT` | PHP mail handler (`send-mail.php`) for contact form |
 | `FONT_AWESOME_CDN` | Font Awesome 6.5.1 CDN URL |
 | `GOOGLE_FONTS_URL` | Inter + Space Grotesk CDN URL |
 
@@ -353,7 +353,7 @@ Each file in `_template/` receives the full `$data` array via PHP's `extract()`.
   - Contact cards: email, phone, location with icons and links
   - Social connect links from `personal.json`
 - Right:
-  - `<form id="contactForm">` with `action` set to `FORMSPREE_ENDPOINT`
+  - `<form id="contactForm">` with `action` set to `MAIL_ENDPOINT` (`send-mail.php`)
   - Fields: name, email, subject, message (all required)
   - Success/error alert `<div>`s (hidden by default; shown by JS)
   - Submit button with loading spinner (toggled by JS)
@@ -385,7 +385,7 @@ Pure vanilla JS — no libraries. All functions are called at the bottom of the 
 | `initTimeline()` | 310–327 | IntersectionObserver adds `.animated` to `#timelineLine` once (one-shot) |
 | `initCounters()` | 332–371 | Animates `.stat-value` elements from 0 to `data-count` over 1600ms; handles floats and `+` suffix |
 | `initScrollReveal()` | 376–403 | IntersectionObserver adds `.visible` to `.reveal` elements; fallback forces `.visible` after 1.5s |
-| `initContactForm()` | 408–456 | `fetch` POST to Formspree; spinner state on button; success/error alerts; form reset on success |
+| `initContactForm()` | 408–456 | `fetch` POST to `send-mail.php` (PHPMailer); spinner state on button; success/error alerts; form reset on success |
 | `initBackToTop()` | 461–472 | Shows `#backToTop` when `scrollY > 400`; scrolls to top on click |
 | `initSmoothScroll()` | 477–486 | All `<a href="#...">` links use `scrollIntoView({ behavior: 'smooth' })` |
 | `initCursorGlow()` | 491–525 | Desktop only: `#cursorGlow` follows mouse with lerp factor 0.1 for trail effect; hidden on touch |
@@ -490,7 +490,7 @@ All loaded via CDN — no npm, no build step.
 | Google Fonts — Space Grotesk | — | Headings |
 | Font Awesome | 6.5.1 | All icons throughout the site |
 | Devicons | latest | Skill icons in the Skills section |
-| Formspree | — | Contact form backend (no server-side code) |
+| PHPMailer | ~6.x | Contact form backend via Gmail SMTP (`send-mail.php`) |
 
 ---
 
