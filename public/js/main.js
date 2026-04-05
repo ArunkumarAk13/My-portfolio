@@ -435,16 +435,19 @@ document.documentElement.classList.add('js-ready');
     setLoading(true);
 
     try {
-      const res = await fetch(form.action, {
+      const res  = await fetch(form.action, {
         method:  'POST',
         body:    new FormData(form),
         headers: { Accept: 'application/json' },
       });
+      const data = await res.json().catch(() => ({}));
 
-      if (res.ok) {
+      if (res.ok && data.ok) {
         showAlert(successEl, true);
         form.reset();
       } else {
+        const errSpan = errorEl && errorEl.querySelector('span');
+        if (errSpan && data.error) errSpan.textContent = data.error;
         showAlert(errorEl, true);
       }
     } catch (_) {

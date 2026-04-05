@@ -31,8 +31,9 @@ define('ENABLE_CURSOR_GLOW',  true);
 define('ENABLE_LOADING_SCREEN', true);
 define('DEFAULT_THEME',       'dark');   // 'dark' or 'light'
 
-// Contact / Formspree
-define('FORMSPREE_ENDPOINT', 'https://formspree.io/f/xnnadjyd');
+// Contact form endpoint (PHP mail handler)
+define('FORMSPREE_ENDPOINT', 'send-mail.php');
+
 
 // External CDN URLs
 define('FONT_AWESOME_CDN', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
