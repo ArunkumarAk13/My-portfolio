@@ -8,6 +8,18 @@ if (!defined('PORTFOLIO_ROOT')) {
     define('PORTFOLIO_ROOT', dirname(__DIR__) . '/');
 }
 
+// Environment: set to 'production' before deploying
+define('APP_ENV', 'development');
+
+// Error reporting — errors shown in dev, hidden in production
+if (APP_ENV === 'production') {
+    error_reporting(0);
+    ini_set('display_errors', 0);
+} else {
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+}
+
 // Site Identity
 define('SITE_NAME',        'Arun Kumar S');
 define('SITE_TAGLINE',     'Web Developer & IoT Enthusiast');
@@ -38,15 +50,15 @@ define('CONTACT_ENDPOINT', 'send-mail.php');
 // Gmail App Password — loaded from secrets.php (gitignored, never commit)
 if (file_exists(__DIR__ . '/secrets.php')) {
     require_once __DIR__ . '/secrets.php';
-} elseif (!defined('GMAIL_APP_PASSWORD')) {
+}
+if (!defined('GMAIL_APP_PASSWORD')) {
     define('GMAIL_APP_PASSWORD', '');
+    if (APP_ENV !== 'production') {
+        error_log('Warning: GMAIL_APP_PASSWORD is not set. Create _config/secrets.php.');
+    }
 }
 
 
 // External CDN URLs
 define('FONT_AWESOME_CDN', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 define('GOOGLE_FONTS_URL', 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-
-// Error reporting — set display_errors to 0 in production
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
