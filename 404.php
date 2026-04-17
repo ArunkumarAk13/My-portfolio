@@ -104,7 +104,7 @@ require_once '_config/_load.php';
     </div>
 
     <h1 class="error-code">404</h1>
-    <p class="error-msg">Oops! The page you're looking for doesn't exist or has been moved.</p>
+    <p class="error-msg">ஒன்னும் இல்ல... திரும்பி போ! 😄</p>
 
     <a href="/" class="back-home">
       <i class="fa-solid fa-house"></i>
